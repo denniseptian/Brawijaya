@@ -45,14 +45,14 @@
             <div class="col-md-3">
 
                 <!-- START WIDGET MESSAGES -->
-                <div class="widget widget-default widget-item-icon" onclick="location.href='pages-messages.html';">
+                <div class="widget widget-default widget-item-icon" onclick="location.href='<?php echo site_url('useraccount'); ?>';">
                     <div class="widget-item-left">
-                        <span class="fa fa-envelope"></span>
+                        <span class="glyphicon glyphicon-lock"></span>
                     </div>                             
                     <div class="widget-data">
                         <div class="widget-int num-count">48</div>
-                        <div class="widget-title">New messages</div>
-                        <div class="widget-subtitle">In your mailbox</div>
+                        <div class="widget-title">Total log login</div>
+                        <div class="widget-subtitle">Into admin pages</div>
                     </div>      
                     <div class="widget-controls">                                
                         <a href="#" class="widget-control-right widget-remove" data-toggle="tooltip" data-placement="top" title="Remove Widget"><span class="fa fa-times"></span></a>
@@ -63,14 +63,31 @@
             </div>
             <div class="col-md-3">
 
-                <!-- START WIDGET REGISTRED -->
-                <div class="widget widget-default widget-item-icon" onclick="location.href='pages-address-book.html';">
+                <!-- START WIDGET TOTAL POST -->
+
+                
+
+                <div class="widget widget-default widget-item-icon" onclick="location.href='<?php echo site_url('admin/postlist'); ?>';">
                     <div class="widget-item-left">
-                        <span class="fa fa-user"></span>
+                        <span class="glyphicon glyphicon-paperclip"></span>
                     </div>
                     <div class="widget-data">
-                        <div class="widget-int num-count">375</div>
-                        <div class="widget-title">Registred users</div>
+                        <div class="widget-int num-count"><?php
+                        $nomor = 0;
+                    if ($data_get == NULL) {
+                      ?>
+                      <div class="alert alert-info" role="alert">Data masih kosong, tolong di isi!</div>
+                      <?php
+                    } else {
+                      $nomor = 0;
+                      foreach ($data_get as $row) {
+                        $nomor++;
+                        ?><?php
+                      }
+                    }
+                    echo $nomor;
+                    ?></div>
+                        <div class="widget-title">Total content</div>
                         <div class="widget-subtitle">On your website</div>
                     </div>
                     <div class="widget-controls">                                

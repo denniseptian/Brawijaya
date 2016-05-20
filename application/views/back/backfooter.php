@@ -42,9 +42,27 @@
 <script type='text/javascript' src='<?php echo base_url('assets/js/plugins/jvectormap/jquery-jvectormap-world-mill-en.js'); ?>'></script>                
 <script type='text/javascript' src='<?php echo base_url('assets/js/plugins/bootstrap/bootstrap-datepicker.js'); ?>'></script>                
 <script type="text/javascript" src="<?php echo base_url('assets/js/plugins/owl/owl.carousel.min.js'); ?>"></script>                 
-
 <script type="text/javascript" src="<?php echo base_url('assets/js/plugins/moment.min.js'); ?>"></script>
 <script type="text/javascript" src="<?php echo base_url('assets/js/plugins/daterangepicker/daterangepicker.js'); ?>"></script>
+<script type='text/javascript' src='<?php echo base_url('assets/js/plugins/icheck/icheck.min.js'); ?>'></script>
+<script type="text/javascript" src="<?php echo base_url('assets/js/plugins/mcustomscrollbar/jquery.mCustomScrollbar.min.js'); ?>"></script>
+<script type="text/javascript" src="<?php echo base_url('assets/js/plugins/datatables/jquery.dataTables.min.js'); ?>"></script>
+<script type='text/javascript' src='<?php echo base_url('assets/js/plugins/icheck/icheck.min.js'); ?>'></script>
+<script type="text/javascript" src="<?php echo base_url('assets/js/plugins/mcustomscrollbar/jquery.mCustomScrollbar.min.js'); ?>"></script>        
+<script type="text/javascript" src="<?php echo base_url('assets/js/plugins/codemirror/codemirror.js'); ?>"></script>        
+<script type='text/javascript' src="<?php echo base_url('assets/js/plugins/codemirror/mode/htmlmixed/htmlmixed.js'); ?>"></script>
+<script type='text/javascript' src="<?php echo base_url('assets/js/plugins/codemirror/mode/xml/xml.js'); ?>"></script>
+<script type='text/javascript' src="<?php echo base_url('assets/js/plugins/codemirror/mode/javascript/javascript.js'); ?>"></script>
+<script type='text/javascript' src="<?php echo base_url('assets/js/plugins/codemirror/mode/css/css.js'); ?>"></script>
+<script type='text/javascript' src="<?php echo base_url('assets/js/plugins/codemirror/mode/clike/clike.js'); ?>"></script>
+<script type='text/javascript' src="<?php echo base_url('assets/js/plugins/codemirror/mode/php/php.js'); ?>"></script>    
+<script type="text/javascript" src="<?php echo base_url('assets/js/plugins/summernote/summernote.js'); ?>"></script> 
+<script type='text/javascript' src="<?php echo base_url('assets/js/plugins/icheck/icheck.min.js'); ?>"></script>
+<script type="text/javascript" src="<?php echo base_url('assets/js/plugins/mcustomscrollbar/jquery.mCustomScrollbar.min.js'); ?>"></script>
+<script type="text/javascript" src="<?php echo base_url('assets/js/plugins/blueimp/jquery.blueimp-gallery.min.js'); ?>"></script>
+<script type="text/javascript" src="<?php echo base_url('assets/js/plugins/dropzone/dropzone.min.js'); ?>"></script>
+<script type="text/javascript" src="<?php echo base_url('assets/js/plugins/icheck/icheck.min.js'); ?>"></script>
+
 <!-- END THIS PAGE PLUGINS-->        
 
 <!-- START TEMPLATE -->
@@ -55,6 +73,7 @@
 
 <script type="text/javascript" src="<?php echo base_url('assets/js/demo_dashboard.js'); ?>"></script>
 <!-- END TEMPLATE -->
-<!-- END SCRIPTS -->         
+<!-- END SCRIPTS -->
+
 </body>
 </html>

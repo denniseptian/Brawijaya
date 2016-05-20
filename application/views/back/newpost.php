@@ -48,6 +48,7 @@
 </label>
 <textarea class="form-control" cols="40" id="textarea1" name="task" rows="10"></textarea>
 </div>
+
 <div class="form-group">
   <div>
    <input type="submit" name="mit" class="btn btn-primary" value="Submit">

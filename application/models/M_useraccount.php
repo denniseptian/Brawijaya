@@ -1,8 +1,9 @@
 <?php
-if (!defined('BASEPATH'))
-	exit('No direct script access allowed');
 
 class M_useraccount extends CI_Model {
+
+	private $table = "user";
+
 	function update($id) {
 		$u_name = $this->input->post('u_uname');
 		$u_passwd = $this->input->post('u_passwd');
@@ -24,4 +25,9 @@ class M_useraccount extends CI_Model {
 			return $hasil;
 		}
 	}
+	function edit($a) {
+		$d = $this->db->get_where('user', array('id_user' => $a))->row();
+		return $d;
+	}
+
 }

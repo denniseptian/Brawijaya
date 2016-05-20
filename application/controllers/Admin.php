@@ -16,9 +16,9 @@ class Admin extends CI_Controller {
     }
 
 	public function index(){
-		//$data['data_get'] = $this->m_post->get_total();
+		$data['data_get'] = $this->m_post->view();
 		$this->load->view('back/backheader');
-		$this->load->view('back/backdashboard');
+		$this->load->view('back/backdashboard',$data);
 		$this->load->view('back/backfooter');
 	}
 	public function newpost(){
@@ -32,9 +32,9 @@ class Admin extends CI_Controller {
 		$this->load->view('back/backfooter');
 	}
 	public function dashboard(){
-
+		$data['data_get'] = $this->m_post->view();
 		$this->load->view('back/backheader');
-		$this->load->view('back/backdashboard');
+		$this->load->view('back/backdashboard',$data);
 		$this->load->view('back/backfooter');
 	}
 	public function logout() {
@@ -46,5 +46,10 @@ class Admin extends CI_Controller {
     	$this->load->view('back/backheader');
 		$this->load->view('back/postlist', $data);
 		$this->load->view('back/backfooter');
-    }    
+    }
+    public function galery(){
+    	$this->load->view('back/backheader');
+    	$this->load->view('back/galery');
+    	$this->load->view('back/backfooter');
+    }
 }

@@ -63,4 +63,7 @@ class M_post extends CI_Model {
 		$this->db->where('id_post', $id);
 		$this->db->update('indexpost', $data);
 	}
+	function viewVisitors(){
+		
+	}
 }
