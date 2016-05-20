@@ -3,6 +3,7 @@
 class Login extends CI_Controller {
     function __construct() {
         parent::__construct();
+        //youre magic code here
         
         if(!isset($_SESSION)){
             session_start();
