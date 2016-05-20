@@ -3,6 +3,8 @@
 class Admin extends CI_Controller {
 	function __construct() {
         parent::__construct();
+
+        $this->load->model('login_log');
         
         if(!isset($_SESSION)){
             session_start();
@@ -17,8 +19,9 @@ class Admin extends CI_Controller {
 
 	public function index(){
 		$data['data_get'] = $this->m_post->view();
+		$log['log'] = $this->login_log->daily();
 		$this->load->view('back/backheader');
-		$this->load->view('back/backdashboard',$data);
+		$this->load->view('back/backdashboard',$data, $log);
 		$this->load->view('back/backfooter');
 	}
 	public function newpost(){
@@ -33,8 +36,9 @@ class Admin extends CI_Controller {
 	}
 	public function dashboard(){
 		$data['data_get'] = $this->m_post->view();
+		$log['log'] = $this->login_log->daily();
 		$this->load->view('back/backheader');
-		$this->load->view('back/backdashboard',$data);
+		$this->load->view('back/backdashboard',$data, $log);
 		$this->load->view('back/backfooter');
 	}
 	public function logout() {

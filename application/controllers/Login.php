@@ -4,6 +4,7 @@ class Login extends CI_Controller {
     function __construct() {
         parent::__construct();
         //youre magic code here
+        $this->load->model('login_log');
         
         if(!isset($_SESSION)){
             session_start();
@@ -31,6 +32,7 @@ class Login extends CI_Controller {
             $cek = $this->Ulogin->cek($u, $p);
             if ($cek->num_rows() > 0) {
                 //login berhasil, buat session
+                $this->login_log->insertLog(123);
                 foreach ($cek->result() as $qad) {
                     $sess_data['u_id'] = $qad->u_id;
                     $sess_data['nama'] = $qad->nama;
@@ -39,9 +41,10 @@ class Login extends CI_Controller {
                     $this->session->set_userdata($sess_data);
                 }
                 redirect('admin/dashboard');
+
             } else {
                 $this->session->set_flashdata('result_login', '<br>Username atau Password yang anda masukkan salah.');
-                redirect('back/login');
+                redirect('login');
             }
         }
     }

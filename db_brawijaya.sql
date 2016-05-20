@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 20 Mei 2016 pada 16.05
--- Versi Server: 10.1.10-MariaDB
--- PHP Version: 5.6.19
+-- Generation Time: 20 Mei 2016 pada 18.32
+-- Versi Server: 10.1.13-MariaDB
+-- PHP Version: 5.6.21
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -81,17 +81,28 @@ CREATE TABLE `login_log` (
   `id_log` int(11) NOT NULL,
   `date` date NOT NULL,
   `id_user` int(11) NOT NULL,
-  `total` int(11) NOT NULL
+  `time` time NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data untuk tabel `login_log`
 --
 
-INSERT INTO `login_log` (`id_log`, `date`, `id_user`, `total`) VALUES
-(1, '2016-05-13', 123, 1),
-(2, '2016-05-20', 123, 1),
-(3, '2016-05-20', 123, 1);
+INSERT INTO `login_log` (`id_log`, `date`, `id_user`, `time`) VALUES
+(-972393150, '2016-05-20', 123, '05:59:54'),
+(1, '2016-05-13', 123, '00:00:01'),
+(2, '2016-05-20', 123, '00:00:01'),
+(3, '2016-05-20', 123, '00:00:01'),
+(6, '2016-05-20', 123, '05:45:16'),
+(7, '2016-05-20', 123, '05:44:53'),
+(23, '2016-05-20', 123, '05:54:46'),
+(11654, '2016-05-20', 123, '05:53:42'),
+(21150, '2016-05-20', 123, '05:53:34'),
+(2325235, '2016-05-20', 123, '18:47:45'),
+(5345534, '2016-05-20', 123, '07:30:18'),
+(9554278, '2016-05-20', 123, '05:55:37'),
+(1257959813, '2016-05-20', 123, '06:01:12'),
+(1302146284, '2016-05-20', 123, '06:13:18');
 
 -- --------------------------------------------------------
 

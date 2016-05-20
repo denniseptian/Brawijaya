@@ -14,7 +14,7 @@ class Outputfiles extends CI_Controller {
 	{
 		
 	}
-	function pdf(){
+	public function pdf(){
 		$hasil = $this->db->get('indexpost');
 		$this->fpdf->FPDF("p", "cm", "A4");
 		$this->fpdf->SetMargins(0.5, 0.5, 0.5, 0.5);

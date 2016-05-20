@@ -50,7 +50,7 @@
                         <span class="glyphicon glyphicon-lock"></span>
                     </div>                             
                     <div class="widget-data">
-                        <div class="widget-int num-count">48</div>
+                        <div class="widget-int num-count"><?php echo 50 ?></div>
                         <div class="widget-title">Total log login</div>
                         <div class="widget-subtitle">Into admin pages</div>
                     </div>      
