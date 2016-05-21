@@ -23,8 +23,7 @@ class M_count extends CI_Model {
             'total' => $total
             );
         $this->db->insert('visitors', $data);
-        
+        }
     }
-}
 
 }

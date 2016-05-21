@@ -20,6 +20,7 @@
 <!-- END MESSAGE BOX-->
 
 <!-- START PRELOADS -->
+
 <audio id="audio-alert" src="audio/alert.mp3" preload="auto"></audio>
 <audio id="audio-fail" src="audio/fail.mp3" preload="auto"></audio>
 <!-- END PRELOADS -->    
@@ -62,6 +63,7 @@
 <script type="text/javascript" src="<?php echo base_url('assets/js/plugins/blueimp/jquery.blueimp-gallery.min.js'); ?>"></script>
 <script type="text/javascript" src="<?php echo base_url('assets/js/plugins/dropzone/dropzone.min.js'); ?>"></script>
 <script type="text/javascript" src="<?php echo base_url('assets/js/plugins/icheck/icheck.min.js'); ?>"></script>
+
 
 <!-- END THIS PAGE PLUGINS-->        
 

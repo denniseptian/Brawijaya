@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 20 Mei 2016 pada 18.32
+-- Generation Time: 21 Mei 2016 pada 11.57
 -- Versi Server: 10.1.13-MariaDB
 -- PHP Version: 5.6.21
 
@@ -35,7 +35,7 @@ CREATE TABLE `count` (
 --
 
 INSERT INTO `count` (`total`) VALUES
-(63);
+(64);
 
 -- --------------------------------------------------------
 
@@ -59,7 +59,6 @@ CREATE TABLE `indexpost` (
 --
 
 INSERT INTO `indexpost` (`id_post`, `id_user`, `title`, `subject`, `date`, `duration`, `content`, `task`) VALUES
-(0, 0, '', '', '0000-00-00', 0, '', ''),
 (190, 0, 'boah', 'hyahahahah', '2016-05-17', 34, 'asd', 'sdbb'),
 (4979, 0, 'ayo berkelana', 'kepanjen', '2016-05-17', 33, 'Dalam date terdapat beberapa format penulisan untuk¬†mengambil tanggal. Berikut adalah format penulisan karakter untuk tanggal :\r\n\r\nd – Menampilkan¬†tanggal sekarang (01-31)\r\nm – Menampilkan bulan sekarang dalam angka¬†(01-12)\r\nY – Menampilkan tahun (dalam empat digit)\r\nl (huruf kecil ‘L’) – menampilkan nama¬†hari sekarang\r\nKarakter lain, seperti “/”, atau “.” “-” Juga dapat disisipkan di antara karakter untuk menambahkan format tambahan. Perhatikan contoh penulisan PHP berikut ', 'Dalam date terdapat beberapa format penulisan untuk¬†mengambil tanggal. Berikut adalah format penulisan karakter untuk tanggal :\r\n\r\nd – Menampilkan¬†tanggal sekarang (01-31)\r\nm – Menampilkan bulan sekarang dalam angka¬†(01-12)\r\nY – Menampilkan tahun (dalam empat digit)\r\nl (huruf kecil ‘L’) – menampilkan nama¬†hari sekarang\r\nKarakter lain, seperti “/”, atau “.” “-” Juga dapat disisipkan di antara karakter untuk menambahkan format tambahan. Perhatikan contoh penulisan PHP berikut '),
 (7813, 0, 'Ali', 'Ndelok youtube', '2016-05-19', 100, 'Youtube.com', 'sekarang lagi liahat Dotaru'),
@@ -81,28 +80,37 @@ CREATE TABLE `login_log` (
   `id_log` int(11) NOT NULL,
   `date` date NOT NULL,
   `id_user` int(11) NOT NULL,
-  `time` time NOT NULL
+  `time` time NOT NULL,
+  `ip_address` varchar(32) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data untuk tabel `login_log`
 --
 
-INSERT INTO `login_log` (`id_log`, `date`, `id_user`, `time`) VALUES
-(-972393150, '2016-05-20', 123, '05:59:54'),
-(1, '2016-05-13', 123, '00:00:01'),
-(2, '2016-05-20', 123, '00:00:01'),
-(3, '2016-05-20', 123, '00:00:01'),
-(6, '2016-05-20', 123, '05:45:16'),
-(7, '2016-05-20', 123, '05:44:53'),
-(23, '2016-05-20', 123, '05:54:46'),
-(11654, '2016-05-20', 123, '05:53:42'),
-(21150, '2016-05-20', 123, '05:53:34'),
-(2325235, '2016-05-20', 123, '18:47:45'),
-(5345534, '2016-05-20', 123, '07:30:18'),
-(9554278, '2016-05-20', 123, '05:55:37'),
-(1257959813, '2016-05-20', 123, '06:01:12'),
-(1302146284, '2016-05-20', 123, '06:13:18');
+INSERT INTO `login_log` (`id_log`, `date`, `id_user`, `time`, `ip_address`) VALUES
+(-972393150, '2016-05-20', 123, '05:59:54', ''),
+(1, '2016-05-13', 123, '00:00:01', ''),
+(2, '2016-05-20', 123, '00:00:01', ''),
+(3, '2016-05-20', 123, '00:00:01', ''),
+(6, '2016-05-20', 123, '05:45:16', ''),
+(7, '2016-05-20', 123, '05:44:53', ''),
+(23, '2016-05-20', 123, '05:54:46', ''),
+(11654, '2016-05-20', 123, '05:53:42', ''),
+(21150, '2016-05-20', 123, '05:53:34', ''),
+(2325235, '2016-05-20', 123, '18:47:45', ''),
+(5345534, '2016-05-20', 123, '07:30:18', ''),
+(9554278, '2016-05-20', 123, '05:55:37', ''),
+(1221393745, '2016-05-21', 123, '09:03:20', '::1'),
+(1256969458, '2016-05-21', 123, '01:52:48', ''),
+(1257959813, '2016-05-20', 123, '06:01:12', ''),
+(1266315569, '2016-05-21', 123, '12:53:02', ''),
+(1276711339, '2016-05-21', 123, '11:11:43', '::1'),
+(1293654132, '2016-05-21', 123, '01:44:35', ''),
+(1302146284, '2016-05-20', 123, '06:13:18', ''),
+(1376838084, '2016-05-21', 123, '11:54:41', '::1'),
+(1392938777, '2016-05-21', 123, '01:07:39', ''),
+(1394154484, '2016-05-21', 123, '02:01:35', '::1');
 
 -- --------------------------------------------------------
 
@@ -139,8 +147,13 @@ CREATE TABLE `visitors` (
 --
 
 INSERT INTO `visitors` (`date`, `total`) VALUES
+('2016-03-07', 90000),
+('2016-04-22', 900),
+('2016-05-05', 210),
+('2016-05-17', 100),
 ('2016-05-19', 10),
-('2016-05-20', 9);
+('2016-05-20', 9),
+('2016-05-21', 40);
 
 --
 -- Indexes for dumped tables
