@@ -4,6 +4,7 @@ class Admin extends CI_Controller {
 	function __construct() {
         parent::__construct();
 
+        $this->load->model('m_post');
         $this->load->model('login_log');
         
         if(!isset($_SESSION)){
@@ -35,7 +36,7 @@ class Admin extends CI_Controller {
 		$this->load->view('back/backfooter');
 	}
 	public function dashboard(){
-		$data['data_get'] = $this->m_post->view();
+		$data['postcount'] = $this->m_post->viewPostCount();
 		$data['log'] = $this->login_log->daily();
 		$this->load->view('back/backheader');
 		$this->load->view('back/backdashboard',$data);

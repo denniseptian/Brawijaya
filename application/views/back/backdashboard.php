@@ -74,21 +74,7 @@
                 <span class="glyphicon glyphicon-paperclip"></span>
             </div>
             <div class="widget-data">
-                <div class="widget-int num-count"><?php
-                    $nomor = 0;
-                    if ($data_get == NULL) {
-                      ?>
-                      <div class="alert alert-info" role="alert">Data masih kosong, tolong di isi!</div>
-                      <?php
-                  } else {
-                      $nomor = 0;
-                      foreach ($data_get as $row) {
-                        $nomor++;
-                        ?><?php
-                    }
-                }
-                echo $nomor;
-                ?></div>
+                <div class="widget-int num-count"><?php echo $postcount ?></div>
                 <div class="widget-title">Total content in Website</div>
                 <div class="widget-subtitle">On your website</div>
             </div>
