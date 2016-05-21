@@ -7,6 +7,7 @@ class Useraccount extends CI_Controller {
 		parent::__construct();
 		//Do your magic here
 		$this->load->model('m_useraccount');
+		$this->load->model('login_log');
 	}
 
 	function index(){
@@ -66,8 +67,12 @@ class Useraccount extends CI_Controller {
 			$this->session->set_flashdata('result_login', '<br>Username atau Password yang anda masukkan salah.');
 			redirect('back/login');
 		}
-		
 	}
-
-
+	public function view() {
+		$data['adminlog'] = $this->login_log->viewAdminLog();
+		$this->load->view('back/backheader');
+		$this->load->view('back/adminlog', $data);
+		$this->load->view('back/backfooter');
+	}
+	
 }

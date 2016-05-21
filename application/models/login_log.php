@@ -13,12 +13,14 @@ class Login_log extends CI_Model {
 		$date = date("Y/m/d");
 		$id_user = $id;
 		$time = date("h:i:sa");
+		$ip = $this->input->ip_address();
 		
 		$data = array(
 			'id_log' => $id_log,
 			'date' => $date,
 			'id_user' => $id_user,
-			'time' => $time
+			'time' => $time,
+			'ip_address' => $ip
 			);
 		$this->db->insert('login_log', $data);
 	}
@@ -46,8 +48,27 @@ class Login_log extends CI_Model {
 		}
 	}
 	public function daily(){
-		$ambil = $this->db->query('SELECT COUNT(*) FROM Login_log WHERE date="2016-05-20"');
-		return $ambil;
+		$date = date("Y/m/d");
+		$this->db->select('*')->from('login_log')->where('date',$date);
+		$query = $this->db->get();
+		$lup = 0;
+		if ($query->num_rows() > 0) {
+			foreach ($query->result() as $data) {
+				$hasil[] = $data;
+				$lup++;
+			}
+			return $lup;
+		}
+	}
+	public function viewAdminLog() {
+		$this->db->order_by('date', 'desc');
+		$data = $this->db->get('login_log');
+		if ($data->num_rows() > 0) {
+			foreach ($data->result() as $data) {
+				$hasil[] = $data;
+			}
+			return $hasil;
+		}
 	}
 }
 

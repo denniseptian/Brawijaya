@@ -36,9 +36,9 @@ class Admin extends CI_Controller {
 	}
 	public function dashboard(){
 		$data['data_get'] = $this->m_post->view();
-		$log['log'] = $this->login_log->daily();
+		$data['log'] = $this->login_log->daily();
 		$this->load->view('back/backheader');
-		$this->load->view('back/backdashboard',$data, $log);
+		$this->load->view('back/backdashboard',$data);
 		$this->load->view('back/backfooter');
 	}
 	public function logout() {

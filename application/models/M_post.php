@@ -28,6 +28,7 @@ class M_post extends CI_Model {
 		$this->db->insert('indexpost', $data);
 	}
 	function view() {
+		$this->db->order_by('date', 'desc');
 		$ambil = $this->db->get('indexpost');
 		if ($ambil->num_rows() > 0) {
 			foreach ($ambil->result() as $data) {

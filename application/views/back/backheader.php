@@ -313,10 +313,5 @@
                     </div>                        
                 </li>
                 <!-- END TASKS -->
-                <!-- FACEBOOK PAGE -->
-                <li class="xn-icon-button pull-right">                
-                    <a href="#"><span class="fa fa-facebook-square"></span></a>
-                </li>
-                <!-- END FACEBOOK PAGE -->
             </ul>
             <!-- END X-NAVIGATION VERTICAL -->    
