@@ -22,17 +22,22 @@
                     <div>                                    
                         <div class="widget-title">Total Visitors</div>                                                                        
                         <div class="widget-subtitle"></div>
-                        <div class="widget-int">50,000</div>
+                        <div class="widget-int"><?php echo $visitors_all ?></div>
                     </div>
                     <div>                                    
-                        <div class="widget-title">Returned</div>
+                        <div class="widget-title">This month</div>
                         <div class="widget-subtitle">Visitors</div>
-                        <div class="widget-int"></div>
+                        <div class="widget-int"><?php echo $visitors_month ?></div>
                     </div>
                     <div>                                    
-                        <div class="widget-title">This day</div>
+                        <div class="widget-title">This week</div>
                         <div class="widget-subtitle">Visitors</div>
-                        <div class="widget-int">1,977</div>
+                        <div class="widget-int"><?php echo $visitors_week ?></div>
+                    </div>
+                    <div>                                    
+                        <div class="widget-title">Today</div>
+                        <div class="widget-subtitle">Visitors</div>
+                        <div class="widget-int"><?php echo $visitors_day ?></div>
                     </div>
                 </div>                            
                 <div class="widget-controls">                                
