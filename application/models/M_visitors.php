@@ -31,7 +31,12 @@ class M_visitors extends CI_Model {
         $this->db->from('visitors');
         $query = $this->db->get();
         
-        return $query->row()->total;
+        if ($query->num_rows() > 0 ) {
+            # code...
+            return $query->row()->total;
+        }
+
+        return $null;
     }
     function getThisMonth(){
         $date = date("Y/m/d");
@@ -40,7 +45,12 @@ class M_visitors extends CI_Model {
         $this->db->from('visitors');
         $query = $this->db->get();
         
-        return $query->row()->total;
+        if ($query->num_rows() > 0 ) {
+            # code...
+            return $query->row()->total;
+        }
+
+        return $null;
     }
     function getThisWeek(){
         $date = date("Y/m/d");
@@ -49,17 +59,30 @@ class M_visitors extends CI_Model {
         $this->db->from('visitors');
         $query = $this->db->get();
         
-        return $query->row()->total;
+        if ($query->num_rows() > 0 ) {
+            # code...
+            return $query->row()->total;
+        }
+
+        return $null;
     }
     function getThisDay(){
+        $null = 0;
         $date = date("Y/m/d");
-        $this->db->select('total')->from('visitors')->where('date',$date);
+        $this->db->select('total');
+        $this->db->from('visitors');
+        $this->db->where('date',$date);
         $query = $this->db->get();
-        $hasil = $query->row();
+
+        if ($query->num_rows() > 0 ) {
+            # code...
+            return $query->row()->total;
+        }
+
+        return $null;
         
-        return $hasil->total;
+        
     }
-	//SELECT * FROM jokes WHERE YEAR(date) = YEAR(NOW()) AND MONTH(date)=MONTH(NOW());
 
 }
 

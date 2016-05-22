@@ -21,7 +21,7 @@
             <!-- START X-NAVIGATION -->
             <ul class="x-navigation">
                 <li class="xn-logo">
-                    <a href="<?php echo site_url('admin/dashboard'); ?>">Admin</a>
+                    <a href="<?php echo site_url('admin'); ?>">Admin</a>
                     <a href="#" class="x-navigation-control"></a>
                 </li>
                 <li class="xn-profile">
@@ -40,7 +40,7 @@
                 </li>
                 <li class="xn-title">Navigation</li>
                 <li class="active">
-                    <a href="<?php echo site_url('admin/dashboard') ?>"><span class="fa fa-desktop"></span> <span class="xn-text">Dashboard</span></a>                        
+                    <a href="<?php echo site_url('admin') ?>"><span class="fa fa-desktop"></span> <span class="xn-text">Dashboard</span></a>                        
                 </li>
                 <li class="xn-openable">
                     <a href="#"><span class="fa fa-file-text-o"></span> <span class="xn-text">Pages</span></a>
@@ -57,6 +57,7 @@
                 <li class="xn-openable">
                     <a href="#"><span class="fa fa-files-o"></span> <span class="xn-text">Componens</span></a>
                     <ul>
+                        <li><a href="<?php echo site_url('admin/file') ?>"><span class="fa fa-floppy-o"></span> File Handling</a></li>
                         <li><a href="pages-profile.html"><span class="fa fa-user"></span> Profile</a></li>
                         <li><a href="<?php site_url('home/addressbook'); ?>"><span class="fa fa-users"></span> Address Book</a></li>
                         <li class="xn-openable">
@@ -141,7 +142,6 @@
                         <li><a href="form-validation.html"><span class="fa fa-list-alt"></span> Validation</a></li>
                         <li><a href="form-wizards.html"><span class="fa fa-arrow-right"></span> Wizards</a></li>
                         <li><a href="form-editors.html"><span class="fa fa-text-width"></span> WYSIWYG Editors</a></li>
-                        <li><a href="form-file-handling.html"><span class="fa fa-floppy-o"></span> File Handling</a></li>
                     </ul>
                 </li>
                 <li class="xn-openable">

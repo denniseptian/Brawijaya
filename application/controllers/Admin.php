@@ -7,6 +7,7 @@ class Admin extends CI_Controller {
         $this->load->model('m_post');
         $this->load->model('login_log');
         $this->load->model('m_visitors');
+        $this->load->model('m_file_handler');
         
         if(!isset($_SESSION)){
             session_start();
@@ -20,10 +21,15 @@ class Admin extends CI_Controller {
     }
 
 	public function index(){
-		$data['data_get'] = $this->m_post->view();
-		$log['log'] = $this->login_log->daily();
+		$data['visitors_all'] = $this->m_visitors->getall();
+		$data['visitors_month'] = $this->m_visitors->getThisMonth();
+		$data['visitors_week'] = $this->m_visitors->getThisWeek();
+		$data['visitors_day'] = $this->m_visitors->getThisDay();
+		$data['postcount'] = $this->m_post->viewPostCount();
+		$data['log'] = $this->login_log->daily();
+		
 		$this->load->view('back/backheader');
-		$this->load->view('back/backdashboard',$data, $log);
+		$this->load->view('back/backdashboard',$data);
 		$this->load->view('back/backfooter');
 	}
 	public function newpost(){
@@ -37,16 +43,7 @@ class Admin extends CI_Controller {
 		$this->load->view('back/backfooter');
 	}
 	public function dashboard(){
-		$data['visitors_all'] = $this->m_visitors->getall();
-		$data['visitors_month'] = $this->m_visitors->getThisMonth();
-		$data['visitors_week'] = $this->m_visitors->getThisWeek();
-		$data['visitors_day'] = $this->m_visitors->getThisDay();
-		$data['postcount'] = $this->m_post->viewPostCount();
-		$data['log'] = $this->login_log->daily();
 		
-		$this->load->view('back/backheader');
-		$this->load->view('back/backdashboard',$data);
-		$this->load->view('back/backfooter');
 	}
 	public function logout() {
         $this->session->sess_destroy();
@@ -61,6 +58,13 @@ class Admin extends CI_Controller {
     public function galery(){
     	$this->load->view('back/backheader');
     	$this->load->view('back/galery');
+    	$this->load->view('back/backfooter');
+    }
+    public function file(){
+    	$data['data_get'] = $this->m_file_handler->view();
+
+    	$this->load->view('back/backheader');
+    	$this->load->view('back/file', $data);
     	$this->load->view('back/backfooter');
     }
 }

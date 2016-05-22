@@ -62,9 +62,11 @@
 <script type="text/javascript" src="<?php echo base_url('assets/js/plugins/mcustomscrollbar/jquery.mCustomScrollbar.min.js'); ?>"></script>
 <script type="text/javascript" src="<?php echo base_url('assets/js/plugins/blueimp/jquery.blueimp-gallery.min.js'); ?>"></script>
 <script type="text/javascript" src="<?php echo base_url('assets/js/plugins/dropzone/dropzone.min.js'); ?>"></script>
+<script type="text/javascript" src="<?php echo base_url('assets/js/plugins/mcustomscrollbar/jquery.mCustomScrollbar.min.js'); ?>"></script>
+<script type="text/javascript" src="<?php echo base_url('assets/js/plugins/blueimp/jquery.blueimp-gallery.min.js'); ?>"></script>
+<script type="text/javascript" src="<?php echo base_url('assets/js/plugins/dropzone/dropzone.min.js'); ?>"></script>
 <script type="text/javascript" src="<?php echo base_url('assets/js/plugins/icheck/icheck.min.js'); ?>"></script>
-
-
+<script type="text/javascript" src="<?php echo base_url('assets/js/plugins/fileinput/fileinput.min.js'); ?>"></script>
 <!-- END THIS PAGE PLUGINS-->        
 
 <!-- START TEMPLATE -->

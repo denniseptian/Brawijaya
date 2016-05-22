@@ -13,13 +13,12 @@
     <div class="content-frame-top">                        
         <div class="page-title">                    
             <h2><span class="fa fa-image"></span> Gallery</h2>
-        </div>                                      
+        </div>                                     
         <div class="pull-right">                            
             <button class="btn btn-primary"><span class="fa fa-upload"></span> Upload</button>
             <button class="btn btn-default content-frame-right-toggle"><span class="fa fa-bars"></span></button>
         </div>                         
     </div>
-
     <!-- START CONTENT FRAME RIGHT -->
     <div class="content-frame-right">                        
         <div class="block push-up-10">
@@ -36,6 +35,8 @@
     </div>
     <!-- END CONTENT FRAME RIGHT -->
 
+
+
     <!-- START CONTENT FRAME BODY -->
     <div class="content-frame-body content-frame-body-left">
 
@@ -50,7 +51,6 @@
         </div>
 
         <div class="gallery" id="links">
-
             <a class="gallery-item" href="assets/images/gallery/nature-1.jpg" title="Nature Image 1" data-gallery>
                 <div class="image">                              
                     <img src="assets/images/gallery/nature-1.jpg" alt="Nature Image 1"/>                                        

@@ -11,7 +11,7 @@ class Login extends CI_Controller {
         }
         $this->load->model(array('Ulogin'));
         if ($this->session->userdata('u_name')) {
-            redirect('admin/dashboard');
+            redirect('admin');
         }
     }
     function index() {
@@ -40,7 +40,7 @@ class Login extends CI_Controller {
                     $sess_data['role'] = $qad->role;
                     $this->session->set_userdata($sess_data);
                 }
-                redirect('admin/dashboard');
+                redirect('admin');
 
             } else {
                 $this->session->set_flashdata('result_login', '<br>Username atau Password yang anda masukkan salah.');
