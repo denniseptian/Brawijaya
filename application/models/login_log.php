@@ -10,6 +10,7 @@ class Login_log extends CI_Model {
 	}
 	public function insertLog($id){
 		$id_log = rand(10000000000, 99999990000);
+		date_default_timezone_set("	Asia/Jakarta"); 
 		$date = date("Y/m/d");
 		$id_user = $id;
 		$time = date("h:i:sa");

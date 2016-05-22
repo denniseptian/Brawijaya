@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 21 Mei 2016 pada 11.57
+-- Generation Time: 23 Mei 2016 pada 00.05
 -- Versi Server: 10.1.13-MariaDB
 -- PHP Version: 5.6.21
 
@@ -36,6 +36,51 @@ CREATE TABLE `count` (
 
 INSERT INTO `count` (`total`) VALUES
 (64);
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `file`
+--
+
+CREATE TABLE `file` (
+  `id_file` int(11) NOT NULL,
+  `filename` varchar(64) NOT NULL,
+  `subject` text NOT NULL,
+  `path` varchar(64) NOT NULL,
+  `dateinsert` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `file`
+--
+
+INSERT INTO `file` (`id_file`, `filename`, `subject`, `path`, `dateinsert`) VALUES
+(14234, 'ini data penting perusahaan', 'data ini berupa data mentah', '//ad//ad//', '2016-05-22');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `gallery`
+--
+
+CREATE TABLE `gallery` (
+  `id` int(11) NOT NULL,
+  `image` varchar(64) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `gallery`
+--
+
+INSERT INTO `gallery` (`id`, `image`) VALUES
+(7349, '0'),
+(7833, '0'),
+(11232, '0'),
+(13064, '0'),
+(15373, '0'),
+(21702, '0'),
+(23201, '0');
 
 -- --------------------------------------------------------
 
@@ -102,15 +147,27 @@ INSERT INTO `login_log` (`id_log`, `date`, `id_user`, `time`, `ip_address`) VALU
 (5345534, '2016-05-20', 123, '07:30:18', ''),
 (9554278, '2016-05-20', 123, '05:55:37', ''),
 (1221393745, '2016-05-21', 123, '09:03:20', '::1'),
+(1227069017, '2016-05-22', 123, '11:54:15', '::1'),
+(1255261539, '2016-05-22', 123, '11:52:43', '::1'),
+(1256500966, '2016-05-22', 123, '11:45:28', '::1'),
 (1256969458, '2016-05-21', 123, '01:52:48', ''),
 (1257959813, '2016-05-20', 123, '06:01:12', ''),
 (1266315569, '2016-05-21', 123, '12:53:02', ''),
 (1276711339, '2016-05-21', 123, '11:11:43', '::1'),
 (1293654132, '2016-05-21', 123, '01:44:35', ''),
+(1300296039, '2016-05-22', 123, '11:40:40', '::1'),
 (1302146284, '2016-05-20', 123, '06:13:18', ''),
+(1338285373, '2016-05-22', 123, '01:28:27', '::1'),
+(1355672936, '2016-05-22', 123, '11:51:01', '::1'),
+(1374750627, '2016-05-22', 123, '02:10:04', '::1'),
 (1376838084, '2016-05-21', 123, '11:54:41', '::1'),
+(1386854316, '2016-05-22', 123, '12:14:08', '::1'),
 (1392938777, '2016-05-21', 123, '01:07:39', ''),
-(1394154484, '2016-05-21', 123, '02:01:35', '::1');
+(1394154484, '2016-05-21', 123, '02:01:35', '::1'),
+(1395660773, '2016-05-22', 123, '11:56:33', '::1'),
+(1407331552, '2016-05-22', 123, '01:36:01', '::1'),
+(1407408646, '2016-05-22', 123, '02:10:41', '::1'),
+(1409851919, '2016-05-22', 123, '12:17:43', '::1');
 
 -- --------------------------------------------------------
 
@@ -129,7 +186,8 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id_user`, `u_name`, `u_passwd`) VALUES
-(123, 'admin', '21232f297a57a5a743894a0e4a801fc3');
+(123, 'admin', '21232f297a57a5a743894a0e4a801fc3'),
+(7783, 'somad', '21232f297a57a5a743894a0e4a801fc3');
 
 -- --------------------------------------------------------
 
@@ -153,7 +211,8 @@ INSERT INTO `visitors` (`date`, `total`) VALUES
 ('2016-05-17', 100),
 ('2016-05-19', 10),
 ('2016-05-20', 9),
-('2016-05-21', 40);
+('2016-05-21', 41),
+('2016-05-22', 2);
 
 --
 -- Indexes for dumped tables
@@ -164,6 +223,18 @@ INSERT INTO `visitors` (`date`, `total`) VALUES
 --
 ALTER TABLE `count`
   ADD PRIMARY KEY (`total`);
+
+--
+-- Indexes for table `file`
+--
+ALTER TABLE `file`
+  ADD PRIMARY KEY (`id_file`);
+
+--
+-- Indexes for table `gallery`
+--
+ALTER TABLE `gallery`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `indexpost`
