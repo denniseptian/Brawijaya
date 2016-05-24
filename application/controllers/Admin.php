@@ -8,6 +8,7 @@ class Admin extends CI_Controller {
         $this->load->model('login_log');
         $this->load->model('m_visitors');
         $this->load->model('m_file_handler');
+        $this->load->model('gallery');
         
         if(!isset($_SESSION)){
             session_start();
@@ -56,8 +57,10 @@ class Admin extends CI_Controller {
 		$this->load->view('back/backfooter');
     }
     public function galery(){
+        $data['grouplist'] = $this->gallery->viewGroups();
+
     	$this->load->view('back/backheader');
-    	$this->load->view('back/galery');
+    	$this->load->view('back/galery', $data);
     	$this->load->view('back/backfooter');
     }
     public function file(){

@@ -7,10 +7,10 @@ class Login_log extends CI_Model {
 	{
 		parent::__construct();
 		//Do your magic here
+		date_default_timezone_set("Asia/Jakarta"); 
 	}
 	public function insertLog($id){
-		$id_log = rand(10000000000, 99999990000);
-		date_default_timezone_set("	Asia/Jakarta"); 
+		$id_log = sha1(rand(10000, 99999).time());
 		$date = date("Y/m/d");
 		$id_user = $id;
 		$time = date("h:i:sa");
@@ -63,6 +63,7 @@ class Login_log extends CI_Model {
 	}
 	public function viewAdminLog() {
 		$this->db->order_by('date', 'desc');
+		$this->db->order_by('time', 'desc');
 		$data = $this->db->get('login_log');
 		if ($data->num_rows() > 0) {
 			foreach ($data->result() as $data) {

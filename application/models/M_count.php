@@ -15,6 +15,7 @@ class M_count extends CI_Model {
            $this->db->where('date', $date);
            $this->db->update('visitors');
        }else{
+        date_default_timezone_set("Asia/Jakarta"); 
         $date = date("Y/m/d");
         $total = 1;
         
