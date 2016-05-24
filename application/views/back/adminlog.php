@@ -57,7 +57,6 @@
                     <td><?php echo $row->date; ?></td>
                     <td><?php echo $row->time; ?></td>
                     <td align="center">
-                    <a href="<?php echo site_url('outputfiles/pdf'); ?>" class=" btn-warning btn-xs"><span class="fa fa-file-text-o" aria-hidden="true"></span></a>
                       <a href="#" class="mb-control btn-warning btn-xs" data-box="#edit"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>
                       <a href="#" class="mb-control btn-danger btn-xs" data-box="#dellete"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>
                     </td>
