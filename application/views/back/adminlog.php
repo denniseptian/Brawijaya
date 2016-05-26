@@ -125,7 +125,7 @@
       </div>
       <div class="mb-footer">
         <div class="pull-right">
-          <a href="" class="btn btn-success btn-lg">Yes</a>
+          <a href="<?php echo site_url('outputfiles/logpdf') ?>" class="btn btn-success btn-lg">Yes</a>
           <button class="btn btn-default btn-lg mb-control-close">No</button>
         </div>
       </div>

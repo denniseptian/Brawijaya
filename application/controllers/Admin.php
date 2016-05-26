@@ -58,6 +58,7 @@ class Admin extends CI_Controller {
     }
     public function galery(){
         $data['grouplist'] = $this->gallery->viewGroups();
+        $data['imagelist'] = $this->gallery->get_allimage();
 
     	$this->load->view('back/backheader');
     	$this->load->view('back/galery', $data);
@@ -69,5 +70,11 @@ class Admin extends CI_Controller {
     	$this->load->view('back/backheader');
     	$this->load->view('back/file', $data);
     	$this->load->view('back/backfooter');
+    }
+    public function uploadgallery(){
+
+        $this->load->view('back/backheader');
+        $this->load->view('back/uploadgallery');
+        $this->load->view('back/backfooter');
     }
 }
