@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 24 Mei 2016 pada 09.08
--- Versi Server: 10.1.10-MariaDB
--- PHP Version: 5.6.19
+-- Generation Time: 26 Mei 2016 pada 02.21
+-- Versi Server: 10.1.13-MariaDB
+-- PHP Version: 5.6.21
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -77,14 +77,7 @@ CREATE TABLE `gallery` (
 
 INSERT INTO `gallery` (`id`, `imagefullname`, `imagepath`, `grups`) VALUES
 (453, '', '', 'Nature'),
-(2134, '', '', 'malang'),
-(7349, '', '0', ''),
-(7833, '', '0', ''),
-(11232, '', '0', ''),
-(13064, '', '0', ''),
-(15373, '', '0', ''),
-(21702, '', '0', ''),
-(23201, '', '0', '');
+(2134, '', '', 'malang');
 
 -- --------------------------------------------------------
 
@@ -108,16 +101,9 @@ CREATE TABLE `indexpost` (
 --
 
 INSERT INTO `indexpost` (`id_post`, `id_user`, `title`, `subject`, `date`, `duration`, `content`, `task`) VALUES
-(190, 0, 'boah', 'hyahahahah', '2016-05-17', 34, 'asd', 'sdbb'),
-(4979, 0, 'ayo berkelana', 'kepanjen', '2016-05-17', 33, 'Dalam date terdapat beberapa format penulisan untuk¬†mengambil tanggal. Berikut adalah format penulisan karakter untuk tanggal :\r\n\r\nd – Menampilkan¬†tanggal sekarang (01-31)\r\nm – Menampilkan bulan sekarang dalam angka¬†(01-12)\r\nY – Menampilkan tahun (dalam empat digit)\r\nl (huruf kecil ‘L’) – menampilkan nama¬†hari sekarang\r\nKarakter lain, seperti “/”, atau “.” “-” Juga dapat disisipkan di antara karakter untuk menambahkan format tambahan. Perhatikan contoh penulisan PHP berikut ', 'Dalam date terdapat beberapa format penulisan untuk¬†mengambil tanggal. Berikut adalah format penulisan karakter untuk tanggal :\r\n\r\nd – Menampilkan¬†tanggal sekarang (01-31)\r\nm – Menampilkan bulan sekarang dalam angka¬†(01-12)\r\nY – Menampilkan tahun (dalam empat digit)\r\nl (huruf kecil ‘L’) – menampilkan nama¬†hari sekarang\r\nKarakter lain, seperti “/”, atau “.” “-” Juga dapat disisipkan di antara karakter untuk menambahkan format tambahan. Perhatikan contoh penulisan PHP berikut '),
-(7813, 0, 'Ali', 'Ndelok youtube', '2016-05-19', 100, 'Youtube.com', 'sekarang lagi liahat Dotaru'),
-(12353, 0, 'sfsdf', 'sdfsdf', '2016-05-19', 78, 'assadff', 'sdfsdf'),
-(14616, 0, 'hellooooo', 'Ngosing lagiii', '2016-05-17', 23, 'I want to set a default value for my html <textarea>. I read from a material that to add default value you have to do something like <textarea>This is default text</textarea>. I did that but it doesn''t work. What''s the right thing to do?', 'function __construct() {\r\n    $this->load->library(''file'');\r\n    $this->load->helper(''string'');\r\n}\r\n\r\nfunction trackVisit(){\r\n    $file= read_file(''./visits.txt'');\r\n\r\n\r\n\r\n    if ( ! write_file(''./visits.txt'', $file))\r\n    {\r\n        echo ''Unable to write the file'';\r\n    }\r\n\r\n}'),
-(15880, 0, 'cara-menggunakan-github-dan-meng', 'cara upload', '2016-05-19', 4, 'Pada kesempatan kali ini saya akan menjelaskan cara menggunakan GitHub, sebelumnya apa itu GitHub.?? GitHub adalah tempat upload project - project opensource dimana project tersebut bisa dikembangkan oleh programmer lain, hal ini baik sekali bila kita memilki project dengan sebuah team bisa dikatakan juga sosial medianya programmer hehehehe :D . Kelebihan github adalah ketika kita membuat sebuah repository project kemudian menguploadnya lalu kita membuat perubahan ata penambahan pada project itu dan di upload ulang ke repository itu maka project yang lama masih di simpan dan tidak akan hilang, jadi kita bisa membuat versi - versi dari project yang kita buat dan hal ini sangat memudahkan kita bila kita ingin ke versi sebelumnya. ', 'Oke langsung ke permasalahan yaitu bagaimana cara upload file ke repository GitHub yang kita miliki di windows (saya pakai windows7 akan lebih mudah lagi kalau memakai linux).\r\nPerangkat yang di gunakan\r\nAkun GitHub, Untuk upload project ke GitHub tentunya kita harus memilki akaun GitHub, caranya langsung buat akun di websitenya https://github.com kemudian daftar.\r\nSofware Git, Untuk sofware ini anda bisa download secara gratis di http://git-scm.com/ , kalo sudah di download silahkan anda install.'),
-(21255, 0, 'asd', 'asdasd', '2016-05-18', 0, 'sdfsdf', 'sdfsdf'),
-(24070, 0, 'asdasd', 'sadasdad', '2016-05-19', 90, 'sadfsdf', 'sdfsdf'),
-(31252, 0, 'adasd', 'qwer', '2016-05-19', 89, 'sfsdf', 'swdfsdf'),
-(31427, 0, 'sdfsdf', 'sdfsdf', '2016-05-19', 78, 'sdf', 'sdf');
+(688, 0, '4', 'r', '2016-05-26', 0, '', 'http://localhost/brawijaya/index.php/post/edit/688#'),
+(17907, 0, 'd', 'd', '2016-05-26', 3, 'dd', 'dd'),
+(20453, 0, '1', '', '2016-05-26', 0, '', '');
 
 -- --------------------------------------------------------
 
@@ -174,8 +160,40 @@ INSERT INTO `login_log` (`id_log`, `date`, `id_user`, `time`, `ip_address`) VALU
 ('5345534', '2016-05-20', 123, '07:30:18', ''),
 ('6', '2016-05-20', 123, '05:45:16', ''),
 ('7', '2016-05-20', 123, '05:44:53', ''),
+('705387f076f341d5f6e879f38bb13ef8', '2016-05-26', 123, '04:00:37', '::1'),
 ('9554278', '2016-05-20', 123, '05:55:37', ''),
-('b9a1a8efdda702a9f9406c123b9c5593', '2016-05-24', 123, '01:17:09', '::1');
+('b9a1a8efdda702a9f9406c123b9c5593', '2016-05-24', 123, '01:17:09', '::1'),
+('de0d63bdb92ffb8b87c2d2c728747e59', '2016-05-25', 123, '08:42:24', '::1');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `upload_img`
+--
+
+CREATE TABLE `upload_img` (
+  `id` int(3) NOT NULL,
+  `namafile` varchar(35) DEFAULT NULL,
+  `type` varchar(10) DEFAULT NULL,
+  `keterangan` text,
+  `name` varchar(35) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `upload_img`
+--
+
+INSERT INTO `upload_img` (`id`, `namafile`, `type`, `keterangan`, `name`) VALUES
+(28, 'file_gallery1464218647.jpg', 'image/jpeg', '', NULL),
+(29, 'file_gallery1464220819.jpg', 'image/jpeg', 'sd', 'asd'),
+(30, 'file_gallery1464220847.jpg', 'image/jpeg', 'rt', 'rtrt'),
+(31, 'file_gallery1464220866.jpg', 'image/jpeg', 'g', 'ret'),
+(32, 'file_gallery1464220976.jpg', 'image/jpeg', 'we', 'we'),
+(33, 'file_gallery1464221026.jpg', 'image/jpeg', 'sd', 'sd'),
+(34, 'file_gallery1464221037.jpg', 'image/jpeg', 'sd', 'sd'),
+(35, 'file_gallery1464221351.jpg', 'image/jpeg', 'er', 'er'),
+(36, 'file_gallery1464221716.jpg', 'image/jpeg', 'asd', 'gambar kandang puyuh'),
+(37, 'file_gallery1464221794.jpg', 'image/jpeg', 'xx', 'Kandang 2');
 
 -- --------------------------------------------------------
 
@@ -259,6 +277,12 @@ ALTER TABLE `login_log`
   ADD KEY `id_user` (`id_user`);
 
 --
+-- Indexes for table `upload_img`
+--
+ALTER TABLE `upload_img`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `user`
 --
 ALTER TABLE `user`
@@ -270,6 +294,15 @@ ALTER TABLE `user`
 ALTER TABLE `visitors`
   ADD PRIMARY KEY (`date`);
 
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `upload_img`
+--
+ALTER TABLE `upload_img`
+  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
 --
 -- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
 --
