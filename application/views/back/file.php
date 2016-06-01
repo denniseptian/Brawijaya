@@ -15,29 +15,6 @@
 <!-- PAGE CONTENT WRAPPER -->
 <div class="page-content-wrap">
 
-    <div class="row">
-        <div class="col-md-12">
-
-            <div class="panel panel-default">
-                <div class="panel-body">
-                    <h3><span class="fa fa-mail-forward"></span> File Input</h3>
-                    <p>Add class <code>file</code> to file input to get Bootstrap FileInput plugin</p>                                    
-                    <form enctype="multipart/form-data" class="form-horizontal">                                        
-                        <div class="form-group">
-                            <div class="col-md-12">
-                                <label>Default</label>
-                                <?php echo form_open_multipart('c_gallery/do_upload');?>
-                                <input type="file" multiple class="file" data-preview-file-type="any"/>
-                                </form>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-
-        </div>
-    </div>
-
     <!-- PAGE CONTENT WRAPPER -->
 <div class="page-content-wrap">                
 
@@ -49,6 +26,7 @@
         <div class="panel-heading">                                
           <h3 class="panel-title">Default</h3>
           <ul class="panel-controls">
+            <li><a href="#" class=""><span class="fa fa-file"></span></a></li>
             <li><a href="#" class="panel-collapse"><span class="fa fa-angle-down"></span></a></li>
             <li><a href="#" class="panel-refresh"><span class="fa fa-refresh"></span></a></li>
             <li><a href="#" class="panel-remove"><span class="fa fa-times"></span></a></li>

@@ -56,8 +56,8 @@ http://www.templatemo.com/tm-475-holiday
 		  <ul class="slides">
 		    <li>
 			    <div class="tm-banner-inner">
-					<h1 class="tm-banner-title">Find <span class="tm-yellow-text">The Best</span> Place</h1>
-					<p class="tm-banner-subtitle">For Your Holidays</p>
+					<h1 class="tm-banner-title">Tentukan <span class="tm-yellow-text">Tempat</span> Terbaik</h1>
+					<p class="tm-banner-subtitle">Untuk liburan mu</p>
 					<a href="#more" class="tm-banner-link">Learn More</a>	
 				</div>
 				<img src="<?php echo base_url('assets/img/banner-1.jpg'); ?>" alt="Image" />	
@@ -65,15 +65,15 @@ http://www.templatemo.com/tm-475-holiday
 		    <li>
 			    <div class="tm-banner-inner">
 					<h1 class="tm-banner-title">Lorem <span class="tm-yellow-text">Ipsum</span> Dolor</h1>
-					<p class="tm-banner-subtitle">Wonderful Destinations</p>
+					<p class="tm-banner-subtitle">Destinasi wisata yang indah</p>
 					<a href="#more" class="tm-banner-link">Learn More</a>	
 				</div>
 		      <img src="<?php echo base_url('assets/img/banner-2.jpg'); ?>" alt="Image" />
 		    </li>
 		    <li>
 			    <div class="tm-banner-inner">
-					<h1 class="tm-banner-title">Proin <span class="tm-yellow-text">Gravida</span> Nibhvell</h1>
-					<p class="tm-banner-subtitle">Velit Auctor</p>
+					<h1 class="tm-banner-title">Pergi <span class="tm-yellow-text">Berwisata  </span> dengan</h1>
+					<p class="tm-banner-subtitle">keluarga tercinta atau teman dekat</p>
 					<a href="#more" class="tm-banner-link">Learn More</a>	
 				</div>
 		      <img src="<?php echo base_url('assets/img/banner-3.jpg'); ?>" alt="Image" />

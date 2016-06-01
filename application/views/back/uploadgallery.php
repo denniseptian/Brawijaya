@@ -23,10 +23,10 @@
             </td>
           </tr>
           <tr>
-            <td style="width:15%;">Grubs</td>
+            <td style="width:15%;">Category</td>
             <td>
               <div class="col-sm-6">
-                <input type="text" name="grubs" class="form-control">
+                <input type="text" name="category" class="form-control">
               </div>
             </td>
           </tr>

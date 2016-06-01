@@ -3,6 +3,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class M_visitors extends CI_Model {
 
+    public function __construct()
+    {
+        parent::__construct();
+        //Do your magic here
+        date_default_timezone_set("Asia/Jakarta");
+    }
+
 	function increment(){
         $date = date("Y/m/d");
 
@@ -14,6 +21,7 @@ class M_visitors extends CI_Model {
            $this->db->where('date', $date);
            $this->db->update('visitors');
        }else{
+        date_default_timezone_set("Asia/Jakarta"); 
         $date = date("Y/m/d");
         $total = 1;
         
@@ -23,6 +31,14 @@ class M_visitors extends CI_Model {
             );
         $this->db->insert('visitors', $data);
         }
+    }
+
+    public function get()
+    {
+        $this->db->select('MONTH(date) as month, SUM(total) AS total');
+        $this->db->from('visitors');
+        $this->db->group_by('MONTH(date)');
+        return $this->db->get();
     }
 
     function getall(){

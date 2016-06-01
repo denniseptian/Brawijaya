@@ -13,6 +13,10 @@ class M_file_handler extends CI_Model {
 			return $hasil;
 		}
 	}
+	function get_insert($data){
+		$this->db->insert($this->tabel, $data);
+		return TRUE;
+	}
 
 	
 

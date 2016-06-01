@@ -1,7 +1,4 @@
 
-
-
-
 <!-- START BREADCRUMB -->
 <ul class="breadcrumb">
     <li><a href="#">Home</a></li>                    
@@ -107,7 +104,7 @@
     <!-- END WIDGETS -->                    
 
     <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-6">
 
             <!-- START USERS ACTIVITY BLOCK -->
             <div class="panel panel-default">
@@ -129,13 +126,13 @@
                     </ul>                                    
                 </div>                                
                 <div class="panel-body padding-0">
-                    <div class="chart-holder" id="dashboard-bar-1" style="height: 200px;"></div>
+                    <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
                 </div>                                    
             </div>
             <!-- END USERS ACTIVITY BLOCK -->
 
         </div>
-        <div class="col-md-4">
+        <div class="col-md-6">
 
             <!-- START VISITORS BLOCK -->
             <div class="panel panel-default">
@@ -157,7 +154,7 @@
                     </ul>
                 </div>
                 <div class="panel-body padding-0">
-                    <div class="chart-holder" id="dashboard-donut-1" style="height: 200px;"></div>
+                    <div id="container-postingan" style="min-width: 310px; max-width: 800px; height: 400px; margin: 0 auto"></div>
                 </div>
             </div>
             <!-- END VISITORS BLOCK -->

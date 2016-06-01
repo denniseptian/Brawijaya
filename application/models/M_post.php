@@ -7,24 +7,8 @@ class M_post extends CI_Model {
 		
 	}
 	
-	function addpost() {
-		$id_post = rand();
-		$title = $this->input->post('title');
-		$subject = $this->input->post('subject');
-		$date = $this->input->post('date');
-		$duration = $this->input->post('duration');
-		$content = $this->input->post('content');
-		$task = $this->input->post('task');
+	function addpost($data) {
 		
-		$data = array(
-			'id_post' => $id_post,
-			'title' => $title,
-			'subject' => $subject,
-			'date' => $date,
-			'duration' => $duration,
-			'content' => $content,
-			'task' => $task
-			);
 		$this->db->insert('indexpost', $data);
 	}
 	function view() {
@@ -58,7 +42,6 @@ class M_post extends CI_Model {
 			'subject' => $subject,
 			'date' => $date,
 			'duration' => $duration,
-			'content' => $content,
 			'task' => $task
 			);
 		$this->db->where('id_post', $id);
@@ -75,5 +58,12 @@ class M_post extends CI_Model {
 			}
 			return $lup;
 		}
+	}
+	function viewPostCountasChart(){
+		$this->db->select('*');
+		$this->db->from('indexpost');
+		$this->db->order_by('opencount', 'desc');
+		return $this->db->get();
+		
 	}
 }

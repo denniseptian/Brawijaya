@@ -3,14 +3,16 @@
 class Home extends CI_Controller {
 	function __construct() {
         parent::__construct();
-        $this->load->model('m_count');
-        $this->m_count->increment();
+        $this->load->model('m_visitors');
+        $this->load->model('m_frontpost');
+        $this->m_visitors->increment();
     }
 
 	public function index()
 	{
+		$data['data_get'] = $this->m_frontpost->view();
 		$this->load->view('front/header');
-		$this->load->view('front/index');
+		$this->load->view('front/index', $data);
 		$this->load->view('front/footer');
 	}
 	public function about(){

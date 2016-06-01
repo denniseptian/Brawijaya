@@ -57,12 +57,6 @@
  <input class="form-control" id="text" name="duration" placeholder="Total hari" type="text"/ value="<?php echo $duration ?>">
 </div>
 <div class="form-group form-group-sm">
-  <label class="control-label " for="textarea">
-   content
- </label>
- <textarea class="form-control" cols="40" id="textarea" name="content" rows="10" ><?php echo $content ?></textarea>
-</div>
-<div class="form-group form-group-sm">
   <label class="control-label " for="textarea1">
    jadwalkegiatan
  </label>

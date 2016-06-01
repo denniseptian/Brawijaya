@@ -22,6 +22,17 @@ class Admin extends CI_Controller {
     }
 
 	public function index(){
+        $data1=array();
+        foreach($this->m_visitors->get()->result_array() as $row){
+            $data1[] = (int) $row['total'];
+            $dateObj   = DateTime::createFromFormat('!m', $row['month']);
+            $bulan[] = $dateObj->format('F');
+        }
+        foreach($this->m_post->viewPostCountasChart()->result_array() as $row){
+            $opencount[] = (int) $row['opencount'];
+            $tittle[] = substr($row['title'], 0, 15);
+        }
+    
 		$data['visitors_all'] = $this->m_visitors->getall();
 		$data['visitors_month'] = $this->m_visitors->getThisMonth();
 		$data['visitors_week'] = $this->m_visitors->getThisWeek();
@@ -31,7 +42,7 @@ class Admin extends CI_Controller {
 		
 		$this->load->view('back/backheader');
 		$this->load->view('back/backdashboard',$data);
-		$this->load->view('back/backfooter');
+		$this->load->view('back/backfooter',array('data'=>$data1, 'bulan' => $bulan, 'opencount' => $opencount, 'tittle' => $tittle));
 	}
 	public function newpost(){
 		$this->load->view('back/backheader');
@@ -59,10 +70,21 @@ class Admin extends CI_Controller {
     public function galery(){
         $data['grouplist'] = $this->gallery->viewGroups();
         $data['imagelist'] = $this->gallery->get_allimage();
+        $data['countgallery'] = $this->gallery->countGallery();
 
     	$this->load->view('back/backheader');
     	$this->load->view('back/galery', $data);
     	$this->load->view('back/backfooter');
+    }
+    public function galeryby(){
+        $category = $this->uri->segment(3);
+        $data['grouplist'] = $this->gallery->viewGroups();
+        $data['imagelist'] = $this->gallery->getimagescategory($category);
+        $data['countgallery'] = $this->gallery->countGallery();
+
+        $this->load->view('back/backheader');
+        $this->load->view('back/galery', $data);
+        $this->load->view('back/backfooter');
     }
     public function file(){
     	$data['data_get'] = $this->m_file_handler->view();

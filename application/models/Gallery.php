@@ -10,29 +10,49 @@ class Gallery extends CI_Model {
   }
   
     //fungsi untuk menampilkan semua data dari tabel database
-  function get_allimage() {
+  function get_allimage()
+  {
     $this->db->from($this->tabel);
     $query = $this->db->get();
     return $query->result();
 
   }
-
     //fungsi insert ke database
   function get_insert($data){
    $this->db->insert($this->tabel, $data);
    return TRUE;
- }
- 
- function viewGroups() {
-  $this->db->order_by('grups', 'desc');
-  $ambil = $this->db->get('gallery');
-  if ($ambil->num_rows() > 0) {
-    foreach ($ambil->result() as $data) {
-      $hasil[] = $data;
-    }
-    return $hasil;
   }
-}
+  function viewGroups() {
+    $this->db->group_by('category');
+    $this->db->from('upload_img');
+    $ambil = $this->db->get();
+    if ($ambil->num_rows() > 0) {
+      foreach ($ambil->result() as $data) {
+        $hasil[] = $data;
+      }
+    return $hasil;
+    }
+  }
+  function getimagescategory($category)
+  {
+    $this->db->from($this->tabel);
+    $this->db->where('category', $category);
+    $query = $this->db->get();
+    return $query->result();
+
+  }
+  function countGallery(){
+    $count = 0;
+    $this->db->group_by('category');
+    $this->db->from('upload_img');
+    $ambil = $this->db->get();
+    if ($ambil->num_rows() > 0) {
+      foreach ($ambil->result() as $data) {
+        $count++;
+      }
+    return $count;
+    }
+  }
 }
 
 /* End of file gallery.php */

@@ -31,19 +31,27 @@
         </div>
         <div class="panel-body">
           <?php echo form_open('post/save', 'role="form"'); ?>
-          <form method="post" id="validate" action="javascript:alert('Form #validate submited');">
+          <form method="post" id="validate" action="javascript:alert('Form #validate submited');" enctype="multipart/form-data">
+          <?=$this->session->flashdata('pesan')?>
            <div class="form-group form-group-sm">
             <label class="control-label " for="name">
-             Title
+             Judul wisata
            </label>
            <input class="validate[required,maxSize[8]] form-control" id="name" name="title" type="text"/>
            <span class="help-block">Required, max size = 8</span>
          </div>
+
          <div class="form-group form-group-sm">
           <label class="control-label " for="subject">
-           Subject
+           Detail tentang wisata
          </label>
          <input class="form-control" id="subject" name="subject" type="text"/>
+         </div>
+         <div class="form-group form-group-sm">
+          <label class="control-label " for="subject">
+           Destinasi wisata
+         </label>
+         <input class="form-control" id="destination" name="destination" type="text"/>
        </div>
        <div class="form-group form-group-sm">
         <label class="control-label " for="date">
@@ -53,20 +61,14 @@
      </div>
      <div class="form-group form-group-sm">
       <label class="control-label " for="text">
-       Duration
+       Durasi wisata
      </label>
      <input class="form-control" id="text" name="duration" placeholder="Total hari" type="text"/>
    </div>
    <div class="form-group form-group-sm">
     <label class="control-label">Select File</label>
-    <input id="input-1" type="file" class="file">
+    <input type="file" name="filefoto" class="form-control">
   </div>
-  <div class="form-group form-group-sm">
-    <label class="control-label " for="textarea">
-     content
-   </label>
-   <textarea class="form-control" cols="40" id="textarea" name="content" rows="10"></textarea>
- </div>
  <div class="form-group form-group-sm">
   <label class="control-label " for="textarea1">
    jadwalkegiatan

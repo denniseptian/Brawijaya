@@ -1,22 +1,4 @@
 
-
-	<!-- Banner -->
-	<section class="tm-banner">
-		<!-- Flexslider -->
-		<div class="flexslider flexslider-banner">
-		  <ul class="slides">
-		    <li>
-			    <div class="tm-banner-inner">
-					<h1 class="tm-banner-title">Your <span class="tm-yellow-text">Special</span> Tour</h1>
-					<p class="tm-banner-subtitle">For Upcoming Holidays</p>
-					<a href="#more" class="tm-banner-link">Contact Us</a>	
-				</div>
-				<img src="img/banner-3.jpg" alt="Banner 3" />	
-		    </li>		    
-		  </ul>
-		</div>	
-	</section>
-
 	<!-- gray bg -->	
 	<section class="container tm-home-section-1" id="more">
 		<div class="row">
