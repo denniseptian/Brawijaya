@@ -78,6 +78,14 @@ http://www.templatemo.com/tm-475-holiday
 				</div>
 		      <img src="<?php echo base_url('assets/img/banner-3.jpg'); ?>" alt="Image" />
 		    </li>
+		    <li>
+			    <div class="tm-banner-inner">
+					<h1 class="tm-banner-title">Lorem <span class="tm-yellow-text">Ipsum</span> Dolor</h1>
+					<p class="tm-banner-subtitle">Destinasi wisata yang indah</p>
+					<a href="#more" class="tm-banner-link">Learn More</a>	
+				</div>
+		      <img src="<?php echo base_url('assets/img/Alun-alun-batu.jpg'); ?>" alt="Image" />
+		    </li>
 		  </ul>
 		</div>	
 	</section>
