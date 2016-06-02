@@ -22,15 +22,27 @@ class Admin extends CI_Controller {
     }
 
 	public function index(){
+        $k = 0;
+        $i = 0;
         $data1=array();
         foreach($this->m_visitors->get()->result_array() as $row){
             $data1[] = (int) $row['total'];
             $dateObj   = DateTime::createFromFormat('!m', $row['month']);
             $bulan[] = $dateObj->format('F');
+            if ($k >=12 ) {
+                # code...
+                break;
+            }
+            $k++;
         }
         foreach($this->m_post->viewPostCountasChart()->result_array() as $row){
             $opencount[] = (int) $row['opencount'];
             $tittle[] = substr($row['title'], 0, 15);
+            if ($i >= 6) {
+                    # code...
+                    break;
+                }
+                $i++;
         }
     
 		$data['visitors_all'] = $this->m_visitors->getall();

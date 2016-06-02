@@ -38,6 +38,7 @@ class M_visitors extends CI_Model {
         $this->db->select('MONTH(date) as month, SUM(total) AS total');
         $this->db->from('visitors');
         $this->db->group_by('MONTH(date)');
+        $this->db->order_by('month', 'desc');
         return $this->db->get();
     }
 

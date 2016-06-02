@@ -162,7 +162,7 @@
 					<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-xxs-12">
 						<div class="tm-home-box-2">						
 							<a href="#"><img src="<?php echo base_url('assets/img/index-03.jpg'); ?> " alt="image" class="img-responsive"></a>
-							<a href="#" ><h3><?php echo $row->title ?></h3></a>
+							<a href="<?php echo site_url('frontpost/post/'. $row->id_post) ?>" ><h3><?php echo $row->title ?></h3></a>
 							<p class="tm-date">Durasi <?php echo $row->duration ?> Hari</p>
 							
 						</div>
@@ -187,129 +187,40 @@
 		<div class="row">
 			<div class="tm-section-header section-margin-top">
 				<div class="col-lg-4 col-md-3 col-sm-3"><hr></div>
-				<div class="col-lg-4 col-md-6 col-sm-6"><h2 class="tm-section-title">Popular Packages</h2></div>
+				<div class="col-lg-4 col-md-6 col-sm-6"><h2 class="tm-section-title">Wisata Populer</h2></div>
 				<div class="col-lg-4 col-md-3 col-sm-3"><hr></div>	
 			</div>
-			<div class="col-lg-6">
-				<div class="tm-home-box-3">
-					<div class="tm-home-box-3-img-container">
-						<img src="<?php echo base_url('assets/img/index-07.jpg'); ?>" alt="image" class="img-responsive">	
-					</div>						
-					<div class="tm-home-box-3-info">
-						<p class="tm-home-box-3-description">Proin gravida nibhvell velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum</p>
-						<div class="tm-home-box-2-container">
-							<a href="#" class="tm-home-box-2-link"><i class="fa fa-heart tm-home-box-2-icon border-right"></i></a>
-							<a href="#" class="tm-home-box-2-link"><span class="tm-home-box-2-description box-3">Travel</span></a>
-							<a href="#" class="tm-home-box-2-link"><i class="fa fa-edit tm-home-box-2-icon border-left"></i></a>
-						</div>
-					</div>						
-				</div>					
-			</div>
-			<div class="col-lg-6">
-				<div class="tm-home-box-3">
-					<div class="tm-home-box-3-img-container">
-						<img src="<?php echo base_url('assets/img/index-08.jpg'); ?>" alt="image" class="img-responsive">	
-					</div>						
-					<div class="tm-home-box-3-info">
-						<p class="tm-home-box-3-description">Proin gravida nibhvell velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum</p>
-						<div class="tm-home-box-2-container">
-							<a href="#" class="tm-home-box-2-link"><i class="fa fa-heart tm-home-box-2-icon border-right"></i></a>
-							<a href="#" class="tm-home-box-2-link"><span class="tm-home-box-2-description box-3">Travel</span></a>
-							<a href="#" class="tm-home-box-2-link"><i class="fa fa-edit tm-home-box-2-icon border-left"></i></a>
-						</div>
-					</div>						
-				</div>
-			</div>
-			<div class="col-lg-6">
-				<div class="tm-home-box-3">
-					<div class="tm-home-box-3-img-container">
-						<img src="<?php echo base_url('assets/img/index-09.jpg'); ?>" alt="image" class="img-responsive">	
-					</div>						
-					<div class="tm-home-box-3-info">
-						<p class="tm-home-box-3-description">Proin gravida nibhvell velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum</p>
-						<div class="tm-home-box-2-container">
-							<a href="#" class="tm-home-box-2-link"><i class="fa fa-heart tm-home-box-2-icon border-right"></i></a>
-							<a href="#" class="tm-home-box-2-link"><span class="tm-home-box-2-description box-3">Travel</span></a>
-							<a href="#" class="tm-home-box-2-link"><i class="fa fa-edit tm-home-box-2-icon border-left"></i></a>
-						</div>
-					</div>						
-				</div>
-			</div>
-			<div class="col-lg-6">
-				<div class="tm-home-box-3">
-					<div class="tm-home-box-3-img-container">
-						<img src="<?php echo base_url('assets/img/index-10.jpg'); ?>" alt="image" class="img-responsive">	
-					</div>						
-					<div class="tm-home-box-3-info">
-						<p class="tm-home-box-3-description">Proin gravida nibhvell velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum</p>
-						<div class="tm-home-box-2-container">
-							<a href="#" class="tm-home-box-2-link"><i class="fa fa-heart tm-home-box-2-icon border-right"></i></a>
-							<a href="#" class="tm-home-box-2-link"><span class="tm-home-box-2-description box-3">Travel</span></a>
-							<a href="#" class="tm-home-box-2-link"><i class="fa fa-edit tm-home-box-2-icon border-left"></i></a>
-						</div>
-					</div>						
-				</div>
-			</div>
-			<div class="col-lg-6">
-				<div class="tm-home-box-3">
-					<div class="tm-home-box-3-img-container">
-						<img src="<?php echo base_url('assets/img/index-10.jpg'); ?>" alt="image" class="img-responsive">	
-					</div>						
-					<div class="tm-home-box-3-info">
-						<p class="tm-home-box-3-description">Proin gravida nibhvell velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum</p>
-						<div class="tm-home-box-2-container">
-							<a href="#" class="tm-home-box-2-link"><i class="fa fa-heart tm-home-box-2-icon border-right"></i></a>
-							<a href="#" class="tm-home-box-2-link"><span class="tm-home-box-2-description box-3">Travel</span></a>
-							<a href="#" class="tm-home-box-2-link"><i class="fa fa-edit tm-home-box-2-icon border-left"></i></a>
-						</div>
-					</div>						
-				</div>
-			</div>
-			<div class="col-lg-6">
-				<div class="tm-home-box-3">
-					<div class="tm-home-box-3-img-container">
-						<img src="<?php echo base_url('assets/img/index-10.jpg'); ?>" alt="image" class="img-responsive">	
-					</div>						
-					<div class="tm-home-box-3-info">
-						<p class="tm-home-box-3-description">Proin gravida nibhvell velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum</p>
-						<div class="tm-home-box-2-container">
-							<a href="#" class="tm-home-box-2-link"><i class="fa fa-heart tm-home-box-2-icon border-right"></i></a>
-							<a href="#" class="tm-home-box-2-link"><span class="tm-home-box-2-description box-3">Travel</span></a>
-							<a href="#" class="tm-home-box-2-link"><i class="fa fa-edit tm-home-box-2-icon border-left"></i></a>
-						</div>
-					</div>						
-				</div>
-			</div>
-			<div class="col-lg-6">
-				<div class="tm-home-box-3">
-					<div class="tm-home-box-3-img-container">
-						<img src="<?php echo base_url('assets/img/index-10.jpg'); ?>" alt="image" class="img-responsive">	
-					</div>						
-					<div class="tm-home-box-3-info">
-						<p class="tm-home-box-3-description">Proin gravida nibhvell velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum</p>
-						<div class="tm-home-box-2-container">
-							<a href="#" class="tm-home-box-2-link"><i class="fa fa-heart tm-home-box-2-icon border-right"></i></a>
-							<a href="#" class="tm-home-box-2-link"><span class="tm-home-box-2-description box-3">Travel</span></a>
-							<a href="#" class="tm-home-box-2-link"><i class="fa fa-edit tm-home-box-2-icon border-left"></i></a>
-						</div>
-					</div>						
-				</div>
-			</div>
-			<div class="col-lg-6">
-				<div class="tm-home-box-3">
-					<div class="tm-home-box-3-img-container">
-						<img src="<?php echo base_url('assets/img/index-10.jpg'); ?>" alt="image" class="img-responsive">	
-					</div>						
-					<div class="tm-home-box-3-info">
-						<p class="tm-home-box-3-description">Proin gravida nibhvell velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum</p>
-						<div class="tm-home-box-2-container">
-							<a href="#" class="tm-home-box-2-link"><i class="fa fa-heart tm-home-box-2-icon border-right"></i></a>
-							<a href="#" class="tm-home-box-2-link"><span class="tm-home-box-2-description box-3">Travel</span></a>
-							<a href="#" class="tm-home-box-2-link"><i class="fa fa-edit tm-home-box-2-icon border-left"></i></a>
-						</div>
-					</div>						
-				</div>
-			</div>
+			<!--hay-->
+			<?php
+			if ($data_popularPost == NULL) {
+				?>
+				<!-- data josong -->
+				<?php
+			} else {
+				$nomor = 0;
+				$limmit = 0;
+				foreach ($data_popularPost as $row) {
+					$nomor++;
+					?>
+					<div class="col-lg-6">
+						<div class="tm-home-box-3">
+							<div class="tm-home-box-3-img-container">
+								<img src="<?php echo base_url('assets/img/index-07.jpg'); ?>" alt="image" class="img-responsive">	
+							</div>						
+							<div class="tm-home-box-3-info">
+								<p class="tm-home-box-3-description"><b><a href="#"><?php echo substr($row->title, 0, 50) ?></a></b><br><br><?php echo substr($row->subject, 0, 100) ?>...</p>
+							</div>						
+						</div>					
+					</div>
+					<?php
+					if ($limmit >=7) {
+						# code...
+						break;
+					}
+					$limmit++;
+				}
+			}
+			?>
 
 		</div>		
 	</div>

@@ -58,7 +58,7 @@
                 }
             },
             series: [{
-                name: 'Tokyo',
+                name: 'Pengunjung',
                 data: <?php echo json_encode($data); ?>
             }]
         });
@@ -91,7 +91,7 @@
             }
         },
         series: [{
-            name: 'John',
+            name: 'Tampilan artikel',
             data: <?php echo json_encode($opencount); ?>
         }]
     });

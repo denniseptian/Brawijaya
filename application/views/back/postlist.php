@@ -36,6 +36,7 @@
                 <th>Judul Post</th>
                 <th>Subject</th>
                 <th>Tanggal</th>
+                <th>Cetak</th>
                 <th>Seting</th>
               </tr>
             </thead>
@@ -52,11 +53,14 @@
                   ?>
                   <tr>
                     <td height="40"><center><?php echo $nomor; ?></center></td>
-                    <td><?php echo substr($row->title, 0, 50); ?></td>
-                    <td><?php echo substr($row->subject, 0, 100); ?></td>
+                    <td><?php echo substr($row->title, 0, 35); ?></td>
+                    <td><?php echo substr($row->subject, 0, 65); ?></td>
                     <td><?php echo $row->date; ?></td>
+                    <td>
+                      <a href="<?php echo site_url('outputfiles/pdf'); ?>" class=" btn btn-xs"><span class="fa fa-file-pdf-o" aria-hidden="true"></span></a>
+                      <a href="<?php echo site_url('outputfiles/pdf'); ?>" class=" btn btn-xs"><span class="fa fa-file-word-o" aria-hidden="true"></span></a>
+                    </td>
                     <td align="center">
-                    <a href="<?php echo site_url('outputfiles/pdf'); ?>" class=" btn-warning btn-xs"><span class="fa fa-file-text-o" aria-hidden="true"></span></a>
                       <a href="<?php echo site_url('post/edit/' . $row->id_post); ?>" class="btn-warning btn-xs" ><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>
                       <a href="#" class="mb-control btn-danger btn-xs" data-box="#dellete"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>
                     </td>

@@ -10,6 +10,7 @@ class Home extends CI_Controller {
 
 	public function index()
 	{
+		$data['data_popularPost'] = $this->m_frontpost->viewPostCount();
 		$data['data_get'] = $this->m_frontpost->view();
 		$this->load->view('front/header');
 		$this->load->view('front/index', $data);
