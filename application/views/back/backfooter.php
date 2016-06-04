@@ -207,7 +207,8 @@ Highcharts.setOptions(Highcharts.theme);
 <script type="text/javascript" src="<?php echo base_url('assets/js/plugins/bootstrap/bootstrap.min.js'); ?>"></script>        
 <!-- END PLUGINS -->
 
-<!-- START THIS PAGE PLUGINS-->        
+<!-- START THIS PAGE PLUGINS-->
+       
 <script type='text/javascript' src='<?php echo base_url('assets/js/plugins/icheck/icheck.min.js'); ?>'></script>        
 <script type="text/javascript" src="<?php echo base_url('assets/js/plugins/mcustomscrollbar/jquery.mCustomScrollbar.min.js'); ?>"></script>
 <script type="text/javascript" src="<?php echo base_url('assets/js/plugins/scrolltotop/scrolltopcontrol.js'); ?>"></script>

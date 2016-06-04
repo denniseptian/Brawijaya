@@ -27,9 +27,10 @@
             ?>
             <div class="alert alert-error">
               <button type="button" class="close" data-dismiss="alert">&times;</button>
+              <div class="alert alert-info" role="alert">
               <strong>Warning!</strong>
               <?php echo validation_errors(); ?>
-              <?php echo $this->session->flashdata('result_login'); ?>
+              <?php echo $this->session->flashdata('result_login'); ?></div> 
             </div>    
             <?php } ?>
               <div class="form-group">
@@ -39,8 +40,14 @@
               </div>
               <div class="form-group">
                 <div class="col-md-12">
-                  <input type="password" name="password" class="form-control" placeholder="Password"/>
+                  <input type="password" name="password" class="form-control" placeholder="Password"/>                  
                 </div>
+              </div>
+              <div align="center">
+                <?php echo $widget;?>
+                <?php echo $script;?>
+              <br>
+              <br>
               </div>
               <div class="form-group">
                 <div class="col-md-6">

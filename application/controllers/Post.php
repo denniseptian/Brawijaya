@@ -1,6 +1,15 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 class Post extends CI_Controller {
+	public function __construct()
+	{
+		parent::__construct();
+		//Do your magic here
+		$this->load->model('m_post');
+		$this->load->library('upload');
+		date_default_timezone_set("Asia/Jakarta"); 
+		
+	}
 
 	var $limit=10;
 	var $offset=10;
@@ -11,57 +20,23 @@ class Post extends CI_Controller {
 	}
 
 	public function save(){
-		$this->load->library('upload');
-		$id_post = rand();
-
-		$nmfile = "file_post".time();
-		$config['upload_path'] = './assets/uploads/post';
-		$config['allowed_types'] = 'gif|jpg|png|jpeg|bmp';
-		$config['max_size'] = '10000';
-		$config['max_width']  = '10000';
-		$config['max_height']  = '10000';
-		$config['file_name'] = $nmfile;
-
-		$this->upload->initialize($config);
-
+		$date = date("Y/m/d");
+		$id_post = time();
 		
-		if ($this->upload->do_upload('filefoto')){
-			$gbr = $this->upload->data();
-			$data = array(
-				'namafile' =>$gbr['file_name'],
-				'type' =>$gbr['file_type'],
-				'id_post' => $id_post,
-				'title' => $this->input->post('title'),
-				'subject' => $this->input->post('subject'),
-				'date' => $this->input->post('date'),
-				'duration' => $this->input->post('duration'),
-				'content' => $this->input->post('content'),
-				'task' => $this->input->post('task')
-				);
-			$this->m_post->addpost($data);
-
-			$config2['image_library'] = 'gd2'; 
-			$config2['source_image'] = $this->upload->upload_path.$this->upload->file_name;
-			$config2['new_image'] = './assets/hasil_resize/';
-			$config2['maintain_ratio'] = TRUE;
-			$config2['width'] = 800; 
-			$config2['height'] = 600;
-			$this->load->library('image_lib',$config2); 
-
-			if ( !$this->image_lib->resize()){
-				$this->session->set_flashdata('errors', $this->image_lib->display_errors('', ''));   
-			}
-
-			$this->session->set_flashdata("pesan", "<div class=\"col-md-12\"><div class=\"alert alert-success\" id=\"alert\">Upload gambar berhasil !!</div></div>");
-			redirect('admin/galery'); 
-		}else{
-			$error = array('error' => $this->upload->display_errors()); 
-
-			$this->session->set_flashdata("pesan", $error);
-			redirect('admin/newpost');
-
-		}
-		
+		$data = array(
+			'id_post' => $id_post,
+			'title' => $this->input->post('title'),
+			'subject' => $this->input->post('subject'),
+			'date' => $date,
+			'duration' => $this->input->post('duration'),
+			'task' => $this->input->post('task'),
+			'opencount' => 0
+			);
+		$this->m_post->addpost($data);
+		$data['data_get'] = $this->m_post->view();
+    	$this->load->view('back/backheader');
+		$this->load->view('back/postlist', $data);
+		$this->load->view('back/backfooter');
 	}
 
 	function add() {

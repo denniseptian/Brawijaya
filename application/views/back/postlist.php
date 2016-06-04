@@ -62,7 +62,7 @@
                     </td>
                     <td align="center">
                       <a href="<?php echo site_url('post/edit/' . $row->id_post); ?>" class="btn-warning btn-xs" ><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>
-                      <a href="#" class="mb-control btn-danger btn-xs" data-box="#dellete"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>
+                      <a onClick="return confirm('Anda yakin ingin menghapus data ini?')" href="<?php echo site_url('post/delete/' . $row->id_post); ?>" class="btn-control btn-danger btn-xs"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>
                     </td>
                   </tr>
                   <?php

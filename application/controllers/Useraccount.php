@@ -22,8 +22,12 @@ class Useraccount extends CI_Controller {
 	function update() {
 		if ($this->input->post('mit')) {
 			$id = $this->input->post('id_user');
-			$this->m_useraccount->update($id);
-			redirect('admin/postlist');
+			if ($this->input->post('npasswd') == $this->input->post('nnpasswd')) {
+				# code...
+				$this->m_useraccount->update($id);
+				redirect('admin');
+			}
+			$this->session->set_flashdata("Pesan","Password tidak sama");
 		} else{
 			redirect('admin/edit/'.$id);
 		}
@@ -43,30 +47,6 @@ class Useraccount extends CI_Controller {
 		$this->load->view('back/edituseraccount', $data);
 		$this->load->view('back/backfooter');
 
-	}
-	function proses() {
-		$this->form_validation->set_rules('username', 'username', 'required');
-		$this->form_validation->set_rules('password', 'password', 'required');
-
-		$usr = $this->input->post('username');
-		$psw = $this->input->post('password');
-		$u = $usr;
-		$p = md5($psw);
-		$cek = $this->Ulogin->cek($u, $p);
-		if ($cek->num_rows() > 0) {
-                //login berhasil, buat session
-			foreach ($cek->result() as $qad) {
-				$sess_data['u_id'] = $qad->u_id;
-				$sess_data['nama'] = $qad->nama;
-				$sess_data['u_name'] = $qad->u_name;
-				$sess_data['role'] = $qad->role;
-				$this->session->set_userdata($sess_data);
-			}
-			redirect('admin/dashboard');
-		} else {
-			$this->session->set_flashdata('result_login', '<br>Username atau Password yang anda masukkan salah.');
-			redirect('back/login');
-		}
 	}
 	public function view() {
 		$data['adminlog'] = $this->login_log->viewAdminLog();

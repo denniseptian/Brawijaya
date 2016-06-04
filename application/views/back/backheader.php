@@ -10,7 +10,8 @@
     <!-- END META SECTION -->
     <!-- CSS INCLUDE -->
     <link rel="stylesheet" type="text/css" id="theme" href="<?php echo base_url('assets/css/theme-default.css'); ?>"/>
-    <!-- EOF CSS INCLUDE -->                                    
+    <!-- EOF CSS INCLUDE -->
+    <script src='https://www.google.com/recaptcha/api.js'></script>                                  
 </head>
 <body>
     <!-- START PAGE CONTAINER -->

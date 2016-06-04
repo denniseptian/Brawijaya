@@ -9,11 +9,6 @@ class Frontpost extends CI_Controller {
 		//Do your magic here
 		$this->load->model('m_frontpost');
 	}
-
-	public function index()
-	{
-		
-	}
 	public function post()
 	{
 		$kd = $this->uri->segment(3);
