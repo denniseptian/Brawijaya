@@ -2,7 +2,7 @@
 <html lang="en">
 <head>        
     <!-- META SECTION -->
-    <title>Joli Admin - Responsive Bootstrap Admin Template</title>            
+    <title>Brawijaya tour and travel - <?php echo $this->session->userdata('u_name'); ?> page</title>            
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -10,8 +10,18 @@
     <!-- END META SECTION -->
     <!-- CSS INCLUDE -->
     <link rel="stylesheet" type="text/css" id="theme" href="<?php echo base_url('assets/css/theme-default.css'); ?>"/>
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/summernote.css'); ?>">
     <!-- EOF CSS INCLUDE -->
-    <script src='https://www.google.com/recaptcha/api.js'></script>                                  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="<?php echo base_url('assets/css/froala_editor.css'); ?>">
+    <link rel="stylesheet" href="<?php echo base_url('assets/css/froala_style.css'); ?>">
+    <link rel="stylesheet" href="<?php echo base_url('assets/css/plugins/code_view.css'); ?>">
+    <link rel="stylesheet" href="<?php echo base_url('assets/css/plugins/image_manager.css'); ?>">
+    <link rel="stylesheet" href="<?php echo base_url('assets/css/plugins/image.css'); ?>">
+    <link rel="stylesheet" href="<?php echo base_url('assets/css/plugins/table.css'); ?>">
+    <link rel="stylesheet" href="<?php echo base_url('assets/css/plugins/video.css'); ?>">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.3.0/codemirror.min.css">
+    <script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
 <body>
     <!-- START PAGE CONTAINER -->
@@ -22,7 +32,7 @@
             <!-- START X-NAVIGATION -->
             <ul class="x-navigation">
                 <li class="xn-logo">
-                    <a href="<?php echo site_url('admin'); ?>">Admin</a>
+                    <a href="<?php echo site_url('admin'); ?>">Brawijaya</a>
                     <a href="#" class="x-navigation-control"></a>
                 </li>
                 <li class="xn-profile">
@@ -34,7 +44,7 @@
                             <img src="<?php echo base_url('assets/assets/images/users/avatar.jpg'); ?>" alt="John Doe"/>
                         </div>
                         <div class="profile-data">
-                            <div class="profile-data-name">Brawijaya</div>
+                            <div class="profile-data-name"><?php echo $this->session->userdata('u_name'); ?></div>
                             <div class="profile-data-title">Tour and Travel</div>
                         </div>
                     </div>                                                                        
@@ -51,145 +61,24 @@
                         </li>
                         <li>
                             <a href="<?php echo site_url('admin/postlist'); ?>"><span class="glyphicon glyphicon-th-list"></span> <span class="xn-text">Post list</span></a>
-                        </li>
-                        <li><a href="<?php echo site_url('admin/galery'); ?>"><span class="fa fa-image"></span> Gallery</a></li>  
-                    </ul>
-                </li>              
-                <li class="xn-openable">
-                    <a href="#"><span class="fa fa-files-o"></span> <span class="xn-text">Componens</span></a>
-                    <ul>
-                        <li><a href="<?php echo site_url('admin/file') ?>"><span class="fa fa-floppy-o"></span> File Handling</a></li>
-                        <li><a href="pages-profile.html"><span class="fa fa-user"></span> Profile</a></li>
-                        <li><a href="<?php site_url('home/addressbook'); ?>"><span class="fa fa-users"></span> Address Book</a></li>
-                        <li class="xn-openable">
-                            <a href="#"><span class="fa fa-clock-o"></span> Timeline</a>
-                            <ul>
-                                <li><a href="pages-timeline.html"><span class="fa fa-align-center"></span> Default</a></li>
-                                <li><a href="pages-timeline-simple.html"><span class="fa fa-align-justify"></span> Full Width</a></li>
-                            </ul>
-                        </li>
-                        <li class="xn-openable">
-                            <a href="#"><span class="fa fa-envelope"></span> Mailbox</a>
-                            <ul>
-                                <li><a href="pages-mailbox-inbox.html"><span class="fa fa-inbox"></span> Inbox</a></li>
-                                <li><a href="pages-mailbox-message.html"><span class="fa fa-file-text"></span> Message</a></li>
-                                <li><a href="pages-mailbox-compose.html"><span class="fa fa-pencil"></span> Compose</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="pages-messages.html"><span class="fa fa-comments"></span> Messages</a></li>
-                        <li><a href="pages-calendar.html"><span class="fa fa-calendar"></span> Calendar</a></li>
-                        <li><a href="pages-tasks.html"><span class="fa fa-edit"></span> Tasks</a></li>
-                        <li><a href="pages-content-table.html"><span class="fa fa-columns"></span> Content Table</a></li>
-                        <li><a href="pages-faq.html"><span class="fa fa-question-circle"></span> FAQ</a></li>
-                        <li><a href="pages-search.html"><span class="fa fa-search"></span> Search</a></li>
-                        <li class="xn-openable">
-                            <a href="#"><span class="fa fa-file"></span> Report</a>
-
-                            <ul>                                    
-                                <li><a href="pages-blog-list.html"><span class="fa fa-copy"></span> List of Posts</a></li>
-                                <li><a href="pages-blog-post.html"><span class="fa fa-file-o"></span>Single Post</a></li>
-                            </ul>
-                        </li>
-                        <li class="xn-openable">
-                            <a href="#"><span class="fa fa-sign-in"></span> Login</a>
-                            <ul>                                    
-                                <li><a href="<?php echo site_url('admin'); ?>">App Login</a></li>
-                                <li><a href="pages-login-website.html">Website Login</a></li>
-                                <li><a href="pages-login-website-light.html"> Website Login Light</a></li>
-                            </ul>
-                        </li>
-                        <li class="xn-openable">
-                            <a href="#"><span class="fa fa-warning"></span> Error Pages</a>
-                            <ul>                                    
-                                <li><a href="pages-error-404.html">Error 404 Sample 1</a></li>
-                                <li><a href="pages-error-404-2.html">Error 404 Sample 2</a></li>
-                                <li><a href="pages-error-500.html"> Error 500</a></li>
-                            </ul>
-                        </li>                            
+                        </li>  
                     </ul>
                 </li>
-                <li class="xn-title">Components</li>
                 <li class="xn-openable">
-                    <a href="#"><span class="fa fa-cogs"></span> <span class="xn-text">UI Kits</span></a>                        
-                    <ul>
-                        <li><a href="ui-widgets.html"><span class="glyphicon glyphicon-font"></span> Language</a></li>                            
-                        <li><a href="ui-widgets.html"><span class="fa fa-heart"></span> Widgets</a></li>                            
-                        <li><a href="ui-elements.html"><span class="fa fa-cogs"></span> Elements</a></li>
-                        <li><a href="ui-buttons.html"><span class="fa fa-square-o"></span> Buttons</a></li>                            
-                        <li><a href="ui-panels.html"><span class="fa fa-pencil-square-o"></span> Panels</a></li>
-                        <li><a href="ui-icons.html"><span class="fa fa-magic"></span> Icons</a><div class="informer informer-warning">+679</div></li>
-                        <li><a href="ui-typography.html"><span class="fa fa-pencil"></span> Typography</a></li>
-                        <li><a href="ui-portlet.html"><span class="fa fa-th"></span> Portlet</a></li>
-                        <li><a href="ui-sliders.html"><span class="fa fa-arrows-h"></span> Sliders</a></li>
-                        <li><a href="ui-alerts-popups.html"><span class="fa fa-warning"></span> Alerts & Popups</a></li>                            
-                        <li><a href="ui-lists.html"><span class="fa fa-list-ul"></span> Lists</a></li>
-                        <li><a href="ui-tour.html"><span class="fa fa-random"></span> Tour</a></li>
-                    </ul>
-                </li>                    
-                <li class="xn-openable">
-                    <a href="#"><span class="fa fa-pencil"></span> <span class="xn-text">Forms</span></a>
+                    <a href="#"><span class="fa fa-file-text-o"></span> <span class="xn-text">Promo</span></a>
                     <ul>
                         <li>
-                            <a href="form-layouts-two-column.html"><span class="fa fa-tasks"></span> Form Layouts</a>
-                            <div class="informer informer-danger">New</div>
-                            <ul>
-                                <li><a href="form-layouts-one-column.html"><span class="fa fa-align-justify"></span> One Column</a></li>
-                                <li><a href="form-layouts-two-column.html"><span class="fa fa-th-large"></span> Two Column</a></li>
-                                <li><a href="form-layouts-tabbed.html"><span class="fa fa-table"></span> Tabbed</a></li>
-                                <li><a href="form-layouts-separated.html"><span class="fa fa-th-list"></span> Separated Rows</a></li>
-                            </ul> 
+                            <a href="<?php echo site_url('#'); ?>"><span class="fa fa-pencil"></span> <span class="xn-text">New Post promo</span></a>
                         </li>
-                        <li><a href="form-elements.html"><span class="fa fa-file-text-o"></span> Elements</a></li>
-                        <li><a href="form-validation.html"><span class="fa fa-list-alt"></span> Validation</a></li>
-                        <li><a href="form-wizards.html"><span class="fa fa-arrow-right"></span> Wizards</a></li>
-                        <li><a href="form-editors.html"><span class="fa fa-text-width"></span> WYSIWYG Editors</a></li>
+                        <li>
+                            <a href="<?php echo site_url('#'); ?>"><span class="glyphicon glyphicon-th-list"></span> <span class="xn-text">Promo list</span></a>
+                        </li>  
                     </ul>
                 </li>
-                <li class="xn-openable">
-                    <a href="tables.html"><span class="fa fa-table"></span> <span class="xn-text">Tables</span></a>
-                    <ul>                            
-                        <li><a href="table-basic.html"><span class="fa fa-align-justify"></span> Basic</a></li>
-                        <li><a href="table-datatables.html"><span class="fa fa-sort-alpha-desc"></span> Data Tables</a></li>
-                        <li><a href="table-export.html"><span class="fa fa-download"></span> Export Tables</a></li>                            
-                    </ul>
-                </li>
-                <li class="xn-openable">
-                    <a href="#"><span class="fa fa-bar-chart-o"></span> <span class="xn-text">Charts</span></a>
-                    <ul>
-                        <li><a href="charts-morris.html"><span class="xn-text">Morris</span></a></li>
-                        <li><a href="charts-nvd3.html"><span class="xn-text">NVD3</span></a></li>
-                        <li><a href="charts-rickshaw.html"><span class="xn-text">Rickshaw</span></a></li>
-                        <li><a href="charts-other.html"><span class="xn-text">Other</span></a></li>
-                    </ul>
-                </li>                    
-                <li>
-                    <a href="maps.html"><span class="fa fa-map-marker"></span> <span class="xn-text">Maps</span></a>
-                </li>                    
-                <li class="xn-openable">
-                    <a href="#"><span class="fa fa-sitemap"></span> <span class="xn-text">Navigation Levels</span></a>
-                    <ul>                            
-                        <li class="xn-openable">
-                            <a href="#">Second Level</a>
-                            <ul>
-                                <li class="xn-openable">
-                                    <a href="#">Third Level</a>
-                                    <ul>
-                                        <li class="xn-openable">
-                                            <a href="#">Fourth Level</a>
-                                            <ul>
-                                                <li><a href="#">Fifth Level</a></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>                            
-                    </ul>
-                </li>
-                <li>
-                    <a href="<?php echo site_url('useraccount'); ?>"><span class="fa fa-user"></span> <span class="xn-text">User Seting</span></a>
-                </li>
-
+                <li><a href="<?php echo site_url('admin/galery'); ?>"><span class="fa fa-image"></span><span class="xn-text"> Galler</span></a></li>
+                <li><a href="<?php echo site_url('admin/file') ?>"><span class="fa fa-floppy-o"></span><span class="xn-text"> File folder</span></a></li>
+                <li><a href="<?php echo site_url('admin/contact') ?>"><span class="fa fa-envelope"></span><span class="xn-text"> Pesanan</span></a></li>
+                <li><a href="<?php echo site_url('useraccount'); ?>"><span class="fa fa-user"></span> <span class="xn-text">User Seting</span></a></li>            
             </ul>
             <!-- END X-NAVIGATION -->
         </div>
@@ -216,6 +105,9 @@
                     <a href="#" class="mb-control" data-box="#mb-signout"><span class="fa fa-sign-out"></span></a>                        
                 </li> 
                 <!-- END SIGN OUT -->
+                <li class="xn-icon-button pull-right">
+                    <a href="<?php echo site_url('admin/newpost') ?>"><span class="glyphicon glyphicon-edit"></span></a>                      
+                </li>
                 <!-- MESSAGES -->                
                 <li class="xn-icon-button pull-right">
                     <a href="#"><span class="fa fa-comments"></span></a>

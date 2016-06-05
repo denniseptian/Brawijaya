@@ -161,7 +161,7 @@
 
 					<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-xxs-12">
 						<div class="tm-home-box-2">						
-							<a href="#"><img src="<?php echo base_url('assets/img/index-03.jpg'); ?> " alt="image" class="img-responsive"></a>
+							<a href="#"><img src="<?php echo base_url('assets/uploads/imagepost_resize/' . $row->namafile); ?> " alt="image" class="img-responsive"></a>
 							<a href="<?php echo site_url('frontpost/post/'. $row->id_post) ?>" ><h3><?php echo $row->title ?></h3></a>
 							<p class="tm-date">Durasi <?php echo $row->duration ?> Hari</p>
 							
@@ -208,7 +208,7 @@
 								<img src="<?php echo base_url('assets/img/index-07.jpg'); ?>" alt="image" class="img-responsive">	
 							</div>						
 							<div class="tm-home-box-3-info">
-								<p class="tm-home-box-3-description"><b><a href="#"><?php echo substr($row->title, 0, 50) ?></a></b><br><br><?php echo substr($row->subject, 0, 100) ?>...</p>
+								<p class="tm-home-box-3-description"><b><a href="#"><?php echo substr($row->title, 0, 100) ?></a></b><br><br><?php echo substr($row->subject, 0, 100) ?>...</p>
 							</div>						
 						</div>					
 					</div>

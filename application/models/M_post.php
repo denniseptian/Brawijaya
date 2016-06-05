@@ -26,6 +26,12 @@ class M_post extends CI_Model {
 		return $d;
 	}
 	function delete($a) {
+		$this->load->helper("file");
+
+		$this->db->where('id_post',$a);
+		$query = $this->db->get('indexpost');
+		$row = $query->row();
+		unlink(".assets/uploads/imgepost/$row->namafile");
 		$this->db->delete('indexpost', array('id_post' => $a));
 		return;
 	}

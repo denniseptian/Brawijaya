@@ -8,7 +8,9 @@ class Frontpost extends CI_Controller {
 		parent::__construct();
 		//Do your magic here
 		$this->load->model('m_frontpost');
-	}
+        $this->load->model('m_visitors');
+        $this->m_visitors->increment();
+    }
 	public function post()
 	{
 		$kd = $this->uri->segment(3);
@@ -23,6 +25,7 @@ class Frontpost extends CI_Controller {
 		$data['duration'] = $dt->duration;
 		$data['task'] = $dt->task;
 		$data['id_post'] = $kd;
+		$data['namafile'] = $dt->namafile;
 
 		$this->load->view('front/header');
 		$this->load->view('front/post', $data);

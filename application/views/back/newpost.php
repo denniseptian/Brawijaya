@@ -62,8 +62,9 @@
               <tr>
                 <td style="width:15%;">Jadwal wisata</td>
                 <td>
-                  <div class="col-md-10">
-                    <textarea name="task" class="form-control"></textarea>
+                  <div class="col-md-12">
+                    <textarea name="task" id='edit' style="margin-top: 30px;" placeholder="Type some text">
+                    </textarea>
                   </div>
                 </td>
               </tr>
@@ -84,4 +85,4 @@
 </div>
 <!-- PAGE CONTENT WRAPPER -->  
 
- <!-- /container -->
+<!-- /container -->

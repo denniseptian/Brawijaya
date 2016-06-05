@@ -5,11 +5,11 @@
 			<div class="flexslider effect2 effect2-contact tm-contact-box-1">
 				<ul class="slides">
 					<li>
-						<img src="<?php echo base_url('assets/img/world-map.png') ?>" alt="image" class="contact-image" />
-						<div class="contact-text">
-							<h2 class="slider-title"><?php echo $title ?></h2>
-							<h3 class="slider-subtitle"><?php echo $subject ?></h3>
-							<p class="description"><?php echo $task ?></p>
+						<div class="col-md6"><img src="<?php echo base_url('assets/uploads/imagepost/' . $namafile) ?>" alt="image" class="contact-image" /></div>
+						<div class="text">
+							<h2 class="title"><?php echo $title ?></h2><br>
+							<?php echo $subject ?><br>
+							<?php echo $task ?>
 							<div class="slider-social">
 								<a href="#" class="tm-social-icon"><i class="fa fa-twitter"></i></a>
 								<a href="#" class="tm-social-icon"><i class="fa fa-facebook"></i></a>
@@ -43,7 +43,7 @@
 						?>
 						<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
 							<div class="tm-about-box-1">
-							<a href="#"><img src="<?php echo base_url('assets/img/about-4.jpg') ?>" alt="img" class="tm-about-box-1-img"></a>
+							<a href="#"><img src="<?php echo base_url('assets/uploads/imagepost_resize/' . $row->namafile) ?>" alt="img" class="tm-about-box-1-img"></a>
 								<h3 class="tm-about-box-1-title"><?php echo $row->title ?></h3>
 								<p class="margin-bottom-15 gray-text"><?php echo $row->destination ?></p>
 								<div class="gray-text">
