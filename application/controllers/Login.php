@@ -42,7 +42,7 @@ class Login extends CI_Controller {
                     $p = md5($psw);
                     $cek = $this->Ulogin->cek($u, $p);
                     if ($cek->num_rows() > 0) {
-                //login berhasil, buat session
+                    //login berhasil, buat session
                         $this->login_log->insertLog(123);
                         foreach ($cek->result() as $qad) {
                             $sess_data['u_id'] = $qad->u_id;

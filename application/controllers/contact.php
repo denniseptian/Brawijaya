@@ -30,6 +30,7 @@ class Contact extends CI_Controller {
 		$data['message'] = $dt->message;
 
 		$data['totalmessage'] = $this->m_contact->countmessage();
+		$data['totalmessagestared'] = $this->m_contact->countmessagestared();
 		$this->load->view('back/backheader');
         $this->load->view('back/viewcontact', $data);
         $this->load->view('back/backfooter');
@@ -54,6 +55,14 @@ class Contact extends CI_Controller {
 
 		$this->m_contact->unstar($dt);
 		redirect('contact/viewstarmessage');
+	}
+	function delete($confirm) {
+		if($confirm){
+			$u = $this->uri->segment(3);
+			$this->m_contact->delete($u);
+
+		}
+		redirect('admin/contact');
 	}
 }
 

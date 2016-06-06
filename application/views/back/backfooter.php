@@ -210,6 +210,7 @@ Highcharts.setOptions(Highcharts.theme);
 <!-- START THIS PAGE PLUGINS-->
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.3.0/codemirror.min.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.3.0/mode/xml/xml.min.js"></script>
+  <script type="text/javascript" scr="<?php echo base_url('assets/js/validator.js'); ?>" ></script>
   <script type="text/javascript" src="<?php echo base_url('assets/js/froala_editor.min.js'); ?>"></script>
   <script type="text/javascript" src="<?php echo base_url('assets/js/plugins/align.min.js'); ?>"></script>
   <script type="text/javascript" src="<?php echo base_url('assets/js/plugins/code_beautifier.min.js'); ?>"></script>

@@ -37,7 +37,7 @@
 			</div>
 			<div class="row">
 				<!-- contact form -->
-				<form action="#" method="post" class="tm-contact-form">
+				<form action="<?php echo site_url('frontcontact/save') ?>" method="post" class="tm-contact-form">
 					<div class="col-lg-6 col-md-6">
 						<div id="google-map"></div>
 						<div class="contact-social">
@@ -50,19 +50,19 @@
 					</div> 
 					<div class="col-lg-6 col-md-6 tm-contact-form-input">
 						<div class="form-group">
-							<input type="text" id="contact_name" class="form-control" placeholder="NAME" />
+							<input type="text" id="contact_name" name="contact_name" class="form-control" placeholder="NAME" />
 						</div>
 						<div class="form-group">
-							<input type="email" id="contact_email" class="form-control" placeholder="EMAIL" />
+							<input type="email" id="contact_email" name="contact_email" class="form-control" placeholder="EMAIL" />
 						</div>
 						<div class="form-group">
-							<input type="text" id="contact_subject" class="form-control" placeholder="SUBJECT" />
+							<input type="text" id="contact_subject" name="contact_subject" class="form-control" placeholder="SUBJECT" />
 						</div>
 						<div class="form-group">
-							<textarea id="contact_message" class="form-control" rows="6" placeholder="MESSAGE"></textarea>
+							<textarea id="contact_message" name="contact_message" class="form-control" rows="6" placeholder="MESSAGE"></textarea>
 						</div>
 						<div class="form-group">
-							<button class="tm-submit-btn" type="submit" name="submit">Submit now</button> 
+							<button class="tm-submit-btn" type="submit" name="mit">Submit now</button> 
 						</div>               
 					</div>
 				</form>

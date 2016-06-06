@@ -17,7 +17,7 @@
       <div class="panel panel-default">
         <div class="panel-heading"><b>Form Upload Image</b></div>
         <div class="panel-body">
-          <form action="<?php echo site_url('post/save') ?>" method="post" enctype="multipart/form-data">
+          <form action="<?php echo site_url('post/update') ?>" method="post" enctype="multipart/form-data">
             <table class="table table-striped">
               <tr>
                 <td style="width:15%;">Nama paket wisata</td>
@@ -70,7 +70,8 @@
               </tr>
               <tr>
                 <td colspan="2">
-                  <input type="submit" class="btn btn-success" value="Simpan">
+                  <input type="hidden" name="id" value="<?php echo $id_post ?>" />
+                  <input type="submit" name="mit" class="btn btn-success" value="Simpan">
                   <button type="reset" class="btn btn-default">Batal</button>
                 </td>
               </tr>

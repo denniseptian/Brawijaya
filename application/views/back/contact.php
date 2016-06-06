@@ -65,7 +65,7 @@
                   <td height="40"><center><?php echo $nomor; ?></center></td>
                   <td><a href="<?php echo site_url('contact/viewContact/'.$row->id_contact) ?>" class="mail-text"><?php echo substr($row->name, 0, 35); ?></a></td>
                   <td><?php echo substr($row->email, 0, 35); ?></td>                    
-                  <td><?php echo substr($row->subject, 0, 100); ?></td>
+                  <td><?php echo substr($row->subject, 0, 65); ?></td>
                   <td><?php echo $row->date; ?></td>
                   <td align="center">
                     <?php 
@@ -81,7 +81,7 @@
                     }
                     ?>
                     <a href="<?php echo site_url('outputfiles/pdf'); ?>" class=" btn btn-xs"><span class="fa fa-file-pdf-o" aria-hidden="true"></span></a>
-                    <a onClick="return confirm('Anda yakin ingin menghapus data ini?')" href="<?php echo site_url('post/delete/' . $row->id_contact); ?>" class="btn-control btn-danger btn-xs"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>
+                    <a onClick="return confirm('Anda yakin ingin menghapus data ini?')" href="<?php echo site_url('contact/delete/' . $row->id_contact); ?>" class="btn-control btn-danger btn-xs"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>
                   </td>
                 </tr>
                 <?php

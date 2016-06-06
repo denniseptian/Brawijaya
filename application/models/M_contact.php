@@ -71,6 +71,9 @@ class M_contact extends CI_Model {
 			return $count;
 		}
 	}
+	function delete($a) {
+		$this->db->delete('contact', array('id_contact' => $a));
+	}
 }
 
 /* End of file M_contact.php */

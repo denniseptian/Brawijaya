@@ -38,16 +38,15 @@ class M_post extends CI_Model {
 	function update($id) {
 		$title = $this->input->post('title');
 		$subject = $this->input->post('subject');
-		$date = $this->input->post('date');
+		$destination = $this->input->post('destination');
 		$duration = $this->input->post('duration');
-		$content = $this->input->post('content');
 		$task = $this->input->post('task');
 		
 		$data = array(
 			'title' => $title,
 			'subject' => $subject,
-			'date' => $date,
 			'duration' => $duration,
+			'destination' => $destination,
 			'task' => $task
 			);
 		$this->db->where('id_post', $id);

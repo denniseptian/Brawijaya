@@ -15,15 +15,15 @@
       <!-- START DEFAULT DATATABLE -->
       <!-- Main component for a primary marketing message or call to action -->
       <div class="panel panel-default">
-        <div class="panel-heading"><b>Paket wisata baru</b></div>
+        <div class="panel-heading"><b>Paket wisata promo baru</b></div>
         <div class="panel-body">
-          <form action="<?php echo site_url('post/save') ?>" data-toggle="validator" method="post" enctype="multipart/form-data">
+          <form action="<?php echo site_url('promo/save') ?>" data-toggle="validator" method="post" enctype="multipart/form-data">
             <table class="table table-striped">
               <tr>
                 <td style="width:15%;">Nama paket wisata</td>
                 <td>
                   <div class="col-sm-6">
-                    <input type="text" name="title" class="form-control" required>
+                    <input id="inputName" type="text" name="title" class="form-control" required>
                   </div>
                 </td>
               </tr>
@@ -52,6 +52,19 @@
                 </td>
               </tr>
               <tr>
+                <td style="width:15%;">Batas promo</td>
+                <td>
+                <div class='col-sm-3'>
+                    <div class="input-group date" data-provide="datepicker" data-date-format="yyyy/mm/dd">
+                      <input name="promolimitdate" type="text" class="form-control" required>
+                      <div class="input-group-addon">
+                        <span class="glyphicon glyphicon-th"></span>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
                 <td style="width:15%;">Cuplikan gambar</td>
                 <td>
                   <div class="col-sm-6">
@@ -60,7 +73,7 @@
                 </td>
               </tr>
               <tr>
-                <td style="width:15%;">Jadwal wisata</td>
+                <td style="width:15%;">Detail tentang promo wisata</td>
                 <td>
                   <div class="col-md-12">
                     <textarea name="task" id='edit' style="margin-top: 30px;" placeholder="Type some text" required>

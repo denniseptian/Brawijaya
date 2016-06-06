@@ -8,7 +8,7 @@
 
 <!-- PAGE TITLE -->
 <div class="page-title">                    
-  <h2><span class="fa fa-file-image-o"></span> Unggah gambar</h2>
+  <h2><span class="fa fa-user"></span> Edit User</h2>
 </div>
 <!-- END PAGE TITLE -->  
 
@@ -23,14 +23,21 @@
       <div class="panel panel-default">
         <div class="panel-heading"><b>User Admin</b></div>
         <div class="panel-body">
-          <form action="<?php echo site_url('useraccount/update') ?>" method="post" enctype="multipart/form-data">
+        <?php
+          if ($this->session->flashdata('ganti')) {
+            # code...
+            ?>
             <div class="alert alert-error">
               <button type="button" class="close" data-dismiss="alert">&times;</button>
               <div class="alert alert-info" role="alert">
               <strong>Warning!</strong>
               <?php echo validation_errors(); ?>
-              <?php echo $this->session->flashdata('pesan'); ?></div> 
+              <?php echo $this->session->flashdata('ganti'); ?></div> 
             </div>
+            <?php
+          }
+        ?>
+          <form action="<?php echo site_url('useraccount/update') ?>" method="post" enctype="multipart/form-data">
             <table class="table table-striped">
               <tr>
                 <td style="width:15%;">Id User</td>

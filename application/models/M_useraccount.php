@@ -5,8 +5,8 @@ class M_useraccount extends CI_Model {
 	private $table = "user";
 
 	function update($id) {
-		$u_name = $this->input->post('u_uname');
-		$u_passwd = $this->input->post('u_passwd');
+		$u_name = $this->session->userdata('u_name');
+		$u_passwd = md5($this->input->post('npasswd'));
 		
 		$data = array(
 			'u_name' => $u_name,
@@ -17,17 +17,11 @@ class M_useraccount extends CI_Model {
 		$this->db->update('user', $data);
 	}
 	function view() {
-		$ambil = $this->db->get('user');
-		if ($ambil->num_rows() > 0) {
-			foreach ($ambil->result() as $data) {
-				$hasil[] = $data;
-			}
-			return $hasil;
-		}
-	}
-	function edit($a) {
-		$d = $this->db->get_where('user', array('id_user' => $a))->row();
+
+		$username = $this->session->userdata('u_name');
+
+		$d = $this->db->get_where('user', array('u_name' => $username))->row();
+
 		return $d;
 	}
-
 }

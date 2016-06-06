@@ -65,9 +65,7 @@ class Admin extends CI_Controller {
       $this->load->view('back/backfooter');
     }
     public function userset(){
-          $this->load->view('back/backheader');
-          $this->load->view('back/userset');
-          $this->load->view('back/backfooter');
+          redirect('useraccount');
     }
     public function dashboard(){
 
@@ -116,5 +114,11 @@ class Admin extends CI_Controller {
     }
     public function contact(){
         redirect('contact');
+    }
+    public function newpromo(){
+        redirect('promo/newpromo');
+    }
+    public function listpromo(){
+        redirect('promo/listpromo');
     }
 }
