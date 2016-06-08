@@ -43,10 +43,10 @@ class C_gallery extends CI_Controller {
             
             $config2['image_library'] = 'gd2'; 
             $config2['source_image'] = $this->upload->upload_path.$this->upload->file_name;
-            $config2['new_image'] = './assets/hasil_resize/';
+            $config2['new_image'] = './assets/uploads/gallery_post/';
             $config2['maintain_ratio'] = FALSE;
-            $config2['width'] = 800; 
-            $config2['height'] = 600;
+            $config3['width'] = 530; 
+            $config3['height'] = 238;
             $this->load->library('image_lib',$config2); 
 
             if ( !$this->image_lib->resize()){

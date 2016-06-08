@@ -55,7 +55,7 @@
 							</div>
 						</div>
 						<?php
-						if ($limmit >=4) {
+						if ($limmit >=3) {
 						# code...
 							break;
 						}
@@ -66,49 +66,4 @@
 			</div>		
 		</div>
 	</section>
-</section>		
-
-<!-- white bg -->
-<section class="section-padding-bottom">
-	<div class="container">
-		<div class="row">
-			<div class="tm-section-header section-margin-top">
-				<div class="col-lg-4 col-md-3 col-sm-3"><hr></div>
-				<div class="col-lg-4 col-md-6 col-sm-6"><h2 class="tm-section-title">Contact Us</h2></div>
-				<div class="col-lg-4 col-md-3 col-sm-3"><hr></div>	
-			</div>				
-		</div>
-		<div class="row">
-			<!-- contact form -->
-			<form action="#" method="post" class="tm-contact-form">
-				<div class="col-lg-6 col-md-6">
-					<div id="google-map"></div>
-					<div class="contact-social">
-						<a href="#" class="tm-social-icon tm-social-facebook"><i class="fa fa-facebook"></i></a>
-						<a href="#" class="tm-social-icon tm-social-dribbble"><i class="fa fa-dribbble"></i></a>
-						<a href="#" class="tm-social-icon tm-social-twitter"><i class="fa fa-twitter"></i></a>
-						<a href="#" class="tm-social-icon tm-social-instagram"><i class="fa fa-instagram"></i></a>
-						<a href="#" class="tm-social-icon tm-social-google-plus"><i class="fa fa-google-plus"></i></a>
-					</div>
-				</div> 
-				<div class="col-lg-6 col-md-6 tm-contact-form-input">
-					<div class="form-group">
-						<input type="text" id="contact_name" class="form-control" placeholder="NAME" />
-					</div>
-					<div class="form-group">
-						<input type="email" id="contact_email" class="form-control" placeholder="EMAIL" />
-					</div>
-					<div class="form-group">
-						<input type="text" id="contact_subject" class="form-control" placeholder="SUBJECT" />
-					</div>
-					<div class="form-group">
-						<textarea id="contact_message" class="form-control" rows="6" placeholder="MESSAGE"></textarea>
-					</div>
-					<div class="form-group">
-						<button class="tm-submit-btn" type="submit" name="submit">Submit now</button> 
-					</div>               
-				</div>
-			</form>
-		</div>			
-	</div>
 </section>

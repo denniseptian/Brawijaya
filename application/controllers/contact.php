@@ -23,6 +23,7 @@ class Contact extends CI_Controller {
 		$id = $this->uri->segment(3);
 		$dt= $this->m_contact->viewmessage($id);
 
+		$data['id_contact'] = $dt->id_contact;
 		$data['name'] = $dt->name;
 		$data['email'] = $dt->email;
 		$data['subject'] = $dt->subject;

@@ -38,9 +38,9 @@ http://www.templatemo.com/tm-475-holiday
 		            </div>
 	  				<nav class="tm-nav">
 						<ul>
-							<li><a href="<?php echo site_url('home'); ?>" class="active">Home</a></li>
+							<li><a href="<?php echo site_url('home'); ?>">Home</a></li>
 							<li><a href="<?php echo site_url('home/about'); ?>">About</a></li>
-							<li><a href="<?php echo site_url('home/tour'); ?>">Our Tours</a></li>
+							<li><a href="<?php echo site_url('home/tour'); ?>">Gallery</a></li>
 							<li><a href="<?php echo site_url('home/contact'); ?>">Contact</a></li>
 						</ul>
 					</nav>		
@@ -61,14 +61,6 @@ http://www.templatemo.com/tm-475-holiday
 					<a href="#more" class="tm-banner-link">Learn More</a>	
 				</div>
 				<img src="<?php echo base_url('assets/img/banner-1.jpg'); ?>" alt="Image" />	
-		    </li>
-		    <li>
-			    <div class="tm-banner-inner">
-					<h1 class="tm-banner-title">Lorem <span class="tm-yellow-text">Ipsum</span> Dolor</h1>
-					<p class="tm-banner-subtitle">Destinasi wisata yang indah</p>
-					<a href="#more" class="tm-banner-link">Learn More</a>	
-				</div>
-		      <img src="<?php echo base_url('assets/img/banner-2.jpg'); ?>" alt="Image" />
 		    </li>
 		    <li>
 			    <div class="tm-banner-inner">

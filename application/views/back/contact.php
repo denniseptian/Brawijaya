@@ -24,7 +24,6 @@
       <div class="list-group border-bottom">
         <a href="<?php echo site_url('contact') ?>" class="list-group-item"><span class="fa fa-inbox"></span> Inbox <span class="badge badge-success"><?php echo $totalmessage ?></span></a>
         <a href="<?php echo site_url('contact/viewstarmessage'); ?>" class="list-group-item"><span class="fa fa-star"></span> Penting <span class="badge badge-warning"><?php echo $totalmessagestared ?></span></a>
-        <a href="<?php echo site_url('contact/trash'); ?>" class="list-group-item"><span class="fa fa-trash-o"></span> Deleted <span class="badge badge-default">1.4k</span></a>                            
       </div>                        
     </div>
   </div>

@@ -9,6 +9,7 @@ class Outputfiles extends CI_Controller {
 		//Do your magic here
 		$this->load->library('fpdf');
 		$this->load->model('login_log');
+		$this->load->model('m_outputfiles');
 	}
 
 	public function index()
@@ -73,7 +74,43 @@ class Outputfiles extends CI_Controller {
 		$this->fpdf->Output("posting.pdf","I");
 
 	}
+	public function pesan(){
+		$p = array("<p>","</p>", "<br>");
+		$ur = $this->uri->segment(3);
+		$data = $this->m_outputfiles->contactselect($ur);
 
+		$this->fpdf->FPDF("p", "cm", "A4");
+		$this->fpdf->SetMargins(0.5, 0.5, 0.5, 0.5);
+		$this->fpdf->AliasNbPages();
+		$this->fpdf->AddPage();
+		$this->fpdf->SetFont('Arial','B',16);
+		$this->fpdf->Image('assets\img\12246598_121391638224969_2264550146514452945_n.jpg',16,1,-300);
+		$this->fpdf->Ln();
+		$this->fpdf->Image('http://chart.googleapis.com/chart?cht=p3&chd=t:60,40&chs=250x100&chl=Hello|World',60,30,90,0,'PNG');
+		$this->fpdf->Ln();
+		$this->fpdf->Cell(2,1,'Pesan costumer!');
+		$this->fpdf->Ln();
+		$this->fpdf->Cell(2,1,'Brawijaya tour and Travel');
+		$this->fpdf->Ln();
+		$this->fpdf->SetFont('Arial','',12);
+		$this->fpdf->Ln();
+		$this->fpdf->Cell(2,1,'Tanggal : '.$data->date);
+		$this->fpdf->Ln();
+		$this->fpdf->Cell(2,1,'Subject : '.$data->subject);
+		$this->fpdf->Ln();
+		$this->fpdf->Cell(2,1,'Pesan');
+		$this->fpdf->Ln();
+		$this->fpdf->MultiCell(20,1,"  ".str_replace($p, '', $data->message));
+		$this->fpdf->Ln();
+		$this->fpdf->Cell(16);
+		$this->fpdf->Cell(20,1,'Pengirim ');
+		$this->fpdf->Ln();
+		$this->fpdf->Ln();
+		$this->fpdf->Cell(16,3);
+		$this->fpdf->Cell(20,1,$data->name);
+		$this->fpdf->Output("posting.pdf","I");
+
+	}
 }
 
 /* End of file outputfiles.php */

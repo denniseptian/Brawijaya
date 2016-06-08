@@ -64,8 +64,8 @@ class Promo extends CI_Controller {
 			$config2['source_image'] = $this->upload->upload_path.$this->upload->file_name;
 			$config2['new_image'] = './assets/uploads/imagepromo_resize/';
 			$config2['maintain_ratio'] = FALSE;
-			$config2['width'] = 254; 
-			$config2['height'] = 185;
+			$config2['width'] = 347; 
+			$config2['height'] = 348;
 			$this->load->library('image_lib',$config2); 
 
 			if ( !$this->image_lib->resize()){

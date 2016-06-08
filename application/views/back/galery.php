@@ -77,9 +77,9 @@
             } else {
                 foreach ($imagelist as $row) {
                   ?>
-                  <a class="gallery-item" href="<?=base_url()?>assets/hasil_resize/<?=$row->namafile;?>" title="Nature Image 1" data-gallery>
+                  <a class="gallery-item" href="<?=base_url()?>assets/uploads/gallery_post/<?=$row->namafile;?>" title="Nature Image 1" data-gallery>
                     <div class="image">                              
-                        <img src="<?=base_url()?>assets/hasil_resize/<?=$row->namafile;?>" alt="Nature Image 1"/>                                        
+                        <img src="<?=base_url()?>assets/uploads/gallery_post/<?=$row->namafile;?>" alt="Nature Image 1"/>                                        
                         <ul class="gallery-item-controls">
                             <li><span class="gallery-item-remove"><i class="fa fa-times"></i></span></li>
                         </ul>                                                                    

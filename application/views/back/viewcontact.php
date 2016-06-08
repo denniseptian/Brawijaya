@@ -15,7 +15,7 @@
         </div>                                                                                
 
         <div class="pull-right">                                                                                    
-            <button class="btn btn-default"><span class="fa fa-print"></span> Print</button>
+            <a href="<?php echo site_url('outputfiles/pesan/'.$id_contact) ?>" type="button" class="btn btn-default"><span class="fa fa-print"></span> Print</a>
             <button class="btn btn-default content-frame-left-toggle"><span class="fa fa-bars"></span></button>
         </div>                        
     </div>
@@ -27,7 +27,6 @@
             <div class="list-group border-bottom">
                 <a href="<?php echo site_url('contact') ?>" class="list-group-item"><span class="fa fa-inbox"></span> Inbox <span class="badge badge-success"><?php echo $totalmessage ?></span></a>
                 <a href="<?php echo site_url('contact/viewstarmessage'); ?>" class="list-group-item"><span class="fa fa-star"></span> Penting <span class="badge badge-warning"><?php echo $totalmessagestared ?></span></a>
-                <a href="<?php echo site_url('contact/trash'); ?>" class="list-group-item"><span class="fa fa-trash-o"></span> Deleted <span class="badge badge-default">1.4k</span></a>                            
             </div>                        
         </div>
     </div>

@@ -37,11 +37,11 @@
                 </li>
                 <li class="xn-profile">
                     <a href="#" class="profile-mini">
-                        <img src="<?php echo base_url('assets/assets/images/users/avatar.jpg');?>" alt="John Doe"/>
+                        <img src="<?php echo base_url('assets/img/12246598_121391638224969_2264550146514452945_n.jpg');?>" alt="John Doe"/>
                     </a>
                     <div class="profile">
                         <div class="profile-image">
-                            <img src="<?php echo base_url('assets/assets/images/users/avatar.jpg'); ?>" alt="John Doe"/>
+                            <img src="<?php echo base_url('assets/img/12246598_121391638224969_2264550146514452945_n.jpg'); ?>" alt="John Doe"/>
                         </div>
                         <div class="profile-data">
                             <div class="profile-data-name"><?php echo $this->session->userdata('u_name'); ?></div>

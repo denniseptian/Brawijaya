@@ -1,7 +1,7 @@
 <footer class="tm-black-bg">
 		<div class="container">
 			<div class="row">
-				<p class="tm-copyright-text">Copyright &copy; 2016 Brawijaya Tour & Travel 
+				<p class="tm-copyright-text">Copyright &copy; 2084 Your Company Name 
                 
                 | Designed by <a rel="nofollow" href="http://www.templatemo.com" target="_parent">templatemo</a></p>
 			</div>
